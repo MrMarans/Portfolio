@@ -1,0 +1,305 @@
+/* Basis-Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body, html {
+    height: 100%;
+        font-family: 'Bahnschrift', sans-serif;
+  }
+  
+  /* Vollbild-Video-Container */
+  .fullscreen-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .project-details {
+    display: none;
+  }
+  
+  .project.expanded .project-details {
+    display: block;
+  }
+
+  .project-details {
+    height: 0;
+    overflow: hidden; /* Versteckt den überschüssigen Text */
+    transition: height 0.3s ease-in-out; /* Hinzugefügte Übergangseigenschaften */
+  }
+  
+  .project-details.expanded {
+    height: auto; /* Ändert die Höhe auf "auto" für vollständige Anzeige */
+  }
+  
+
+  /* Video */
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Animierter Text */
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  
+  .animated-text {
+    font-size: 3rem;
+    color: white;
+    opacity: 0;
+    animation: fade-in 3s ease-out forwards;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Scrollbar-Inhalt */
+  .scrollable-content {
+    background-color: #f2f2f2;
+    padding: 20px;
+    overflow-y: scroll;
+    height: calc(100vh - 50px);
+  }
+  
+  /* Menü */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    z-index: 999;
+  }
+  
+  .menu.visible {
+    opacity: 1;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+  }
+  
+  .menu ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Abschnitte */
+  .section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Projekte */
+  .project-list {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  
+  .project-box {
+    background-color: #E8E8E8;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 10px; /* Platz zwischen den Projekten */
+    border-radius: 10px; /* Abgerundete Ecken */
+  }
+  
+  .project-box img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .project-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .project-box p {
+    font-size: 1rem;
+  }
+  
+  .project.hidden {
+    display: none;
+  }
+  
+  .scrollable-content {
+    background-color: #f2f2f2;
+    padding: 20px;
+    height: auto; /* Ändere die Höhe auf "auto" */
+  }
+  
+  .project-box img {
+    max-width: 100px; /* Ändere die Breite nach deinen Wünschen */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .project:nth-child(even) .project-box {
+    background-color: #E8E8E8; /* Dunklere Hintergrundfarbe für gerade Projekte */
+  }
+  
+  .project:nth-child(odd) .project-box {
+    background-color: #CFCFCF; /* Dunklere Hintergrundfarbe für ungerade Projekte */
+  }
+  
+  /* Responsive Layout für Desktop */
+  @media screen and (min-width: 768px) {
+    .project-box {
+      display: flex;
+      align-items: center;
+      text-align: left;
+    }
+  
+    .project-box img {
+      width: 150px;
+      margin-right: 20px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .project-box {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .project-box img {
+      flex: 0 0 30%; /* Hier kannst du die Breite anpassen */
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .project-box .project-info {
+      flex: 0 0 70%; /* Hier kannst du die Breite anpassen */
+    }
+  
+    .project-box .project-info h3 {
+      margin-top: 0;
+    }
+  }
+  
+  /* Scroll-Down-Pfeile */
+  .scroll-down-arrows {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 2s infinite;
+  }
+  
+  .arrow {
+    width: 30px;
+    height: 30px;
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 10px 20px;
+  }
+  
+  .arrow-1 {
+    animation-delay: 0.3s;
+  }
+  
+  .arrow-2 {
+    animation-delay: 0.6s;
+  }
+  .arrow-3 {
+    animation-delay: 0.9s;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translate(-50%, 0);
+    }
+    50% {
+      transform: translate(-50%, 10px);
+    }
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  /* Hinzugefügte CSS-Regeln für Trennlinien */
+  .project-box:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .project-line {
+    border-top: 1px solid red;
+    display: none;
+  }
+  
+  .project:not(:last-child) .project-line {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    display: block;
+  }
+  
+  .project.last-visible-project .project-line {
+    display: none;
+  }
+  
+  .project-line {
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    margin-top: 20px;
+  }
+  
+  .project-list .project-box.alternate-background {
+    background-color: #520202;
+  }
+  
+  @media (max-width: 767px) {
+    .project-list {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  
