@@ -1,305 +1,431 @@
+:root {
+  --white-color: #2a2a2a;
+  --shadow-color: #4d4d4d;
+  --transition-color: #2d2d2d;
+  --whiterBlack-color: #2c2c2c;
+  --accentSuperLight-color: #f40fb7;
+  --accentlight-color: #d415a1;
+  --accent-color: #a70f7e;
+  --accentShadow-color: #860563;
+}
+
 /* Basis-Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body, html {
-    height: 100%;
-        font-family: 'Bahnschrift', sans-serif;
-  }
-  
-  /* Vollbild-Video-Container */
-  .fullscreen-video {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  .project-details {
-    display: none;
-  }
-  
-  .project.expanded .project-details {
-    display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: white;
+}
+
+#transition {
+  position: fixed;
+  height: 100%;
+  width: 0%;
+  z-index: 10000;
+  background-color: var(--transition-color);
+  transition: width 0.3s ease-in;
+  overflow: hidden;
+  filter: blur(0, 60px);
+}
+
+
+#aboutMe {
+  background-color: var(--accentShadow-color);
+  color: white;
+}
+
+#timeline {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: yellow;
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+  top: 50%;
+  right: 0;
+  width: 50%;
+  left: 25%;
+}
+
+.point {
+  display: absolute;
+  left: 25%;
+  right: 0%;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.circle {
+  display: relative;
+  top: 0%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+
+.filter-buttons {
+  margin-bottom: 3em;
+}
+
+.filter-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: var(--accentShadow-color);
+  color: #ffffff;
+  border: none;
+  transform: translateY(0px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 0px var(--accentShadow-color);
+  margin-left: 5px;
+  margin-right: 5px;
+  scale: 1.05;
+}
+
+.filter-button:hover {
+  scale: 1.0;
+  transform: translateY(-.25em);
+  box-shadow: 0px 7px 10px var(--accentShadow-color);
+  background-color: var(--accentlight-color);
+}
+
+.filter-button.active {
+  background-color: var(--accentSuperLight-color);
+}
+
+#Logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in;
+  filter: blur(5px);
+  opacity: 0;
+  width: 10vw;
+}
+
+/* Vollbild-Video-Container */
+.fullscreen-video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video */
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animierter Text */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.animated-text {
+  font-size: 3rem;
+  color: white;
+  opacity: 0;
+  animation: fade-in 2s ease-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    filter: blur(30px);
+    opacity: 0;
   }
 
-  .project-details {
-    height: 0;
-    overflow: hidden; /* Versteckt den überschüssigen Text */
-    transition: height 0.3s ease-in-out; /* Hinzugefügte Übergangseigenschaften */
-  }
-  
-  .project-details.expanded {
-    height: auto; /* Ändert die Höhe auf "auto" für vollständige Anzeige */
-  }
-  
-
-  /* Video */
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Animierter Text */
-  .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-  }
-  
-  .animated-text {
-    font-size: 3rem;
-    color: white;
-    opacity: 0;
-    animation: fade-in 3s ease-out forwards;
-  }
-  
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Scrollbar-Inhalt */
-  .scrollable-content {
-    background-color: #f2f2f2;
-    padding: 20px;
-    overflow-y: scroll;
-    height: calc(100vh - 50px);
-  }
-  
-  /* Menü */
-  .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f2f2f2;
-    padding: 10px 0;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-    z-index: 999;
-  }
-  
-  .menu.visible {
+  100% {
+    filter: blur(0px);
     opacity: 1;
   }
-  
-  .menu ul {
-    list-style-type: none;
-  }
-  
-  .menu ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .menu ul li a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  /* Abschnitte */
-  .section {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  /* Projekte */
-  .project-list {
-    margin-left: 30%;
-    margin-right: 30%;
-  }
-  
+}
+
+
+
+/* Menü */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(232, 232, 232, 0.79);
+  padding: 10px 0;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  z-index: 999;
+}
+
+.menu.visible {
+  opacity: 1;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Abschnitte */
+.section {
+  background-color: var(--white-color);
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Projekte */
+.project-list {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.project-box {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  /* Abgerundete Ecken */
+  box-shadow: 0px 0px 60px var(--accentShadow-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 15px 15px 30px var(--accent-color);
+  scale: 1.05;
+}
+
+.project-box img {
+  width: 200px;
+  height: auto;
+}
+
+.project-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.project-box p {
+  font-size: 1rem;
+}
+
+.project.hidden {
+  display: none;
+}
+
+.scrollable-content {
+  overflow-y: scroll;
+  height: calc(100vh - 50px);
+  background-color: var(--primary-color);
+  height: auto;
+  /* Ändere die Höhe auf "auto" */
+}
+
+.project-box img {
+  max-width: 100px;
+  /* Ändere die Breite nach deinen Wünschen */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.project:nth-child(odd) .project-box {
+  background-color: var(--whiterBlack-color);
+  /* Dunklere Hintergrundfarbe für ungerade Projekte */
+}
+
+/* Responsive Layout für Desktop */
+@media screen and (min-width: 768px) {
   .project-box {
-    background-color: #E8E8E8;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 10px; /* Platz zwischen den Projekten */
-    border-radius: 10px; /* Abgerundete Ecken */
-  }
-  
-  .project-box img {
-    width: 200px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .project-box h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-  }
-  
-  .project-box p {
-    font-size: 1rem;
-  }
-  
-  .project.hidden {
-    display: none;
-  }
-  
-  .scrollable-content {
-    background-color: #f2f2f2;
-    padding: 20px;
-    height: auto; /* Ändere die Höhe auf "auto" */
-  }
-  
-  .project-box img {
-    max-width: 100px; /* Ändere die Breite nach deinen Wünschen */
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .project:nth-child(even) .project-box {
-    background-color: #E8E8E8; /* Dunklere Hintergrundfarbe für gerade Projekte */
-  }
-  
-  .project:nth-child(odd) .project-box {
-    background-color: #CFCFCF; /* Dunklere Hintergrundfarbe für ungerade Projekte */
-  }
-  
-  /* Responsive Layout für Desktop */
-  @media screen and (min-width: 768px) {
-    .project-box {
-      display: flex;
-      align-items: center;
-      text-align: left;
-    }
-  
-    .project-box img {
-      width: 150px;
-      margin-right: 20px;
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .project-box {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  
-    .project-box img {
-      flex: 0 0 30%; /* Hier kannst du die Breite anpassen */
-      margin-right: 20px;
-      margin-bottom: 20px;
-    }
-  
-    .project-box .project-info {
-      flex: 0 0 70%; /* Hier kannst du die Breite anpassen */
-    }
-  
-    .project-box .project-info h3 {
-      margin-top: 0;
-    }
-  }
-  
-  /* Scroll-Down-Pfeile */
-  .scroll-down-arrows {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
     align-items: center;
-    animation: bounce 2s infinite;
+    text-align: left;
   }
-  
-  .arrow {
-    width: 30px;
-    height: 30px;
-    border: solid #ffffff;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-    margin: 10px 20px;
+
+  .project-box img {
+    width: 150px;
+    margin-right: 20px;
   }
-  
-  .arrow-1 {
-    animation-delay: 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .project-box {
+    display: flex;
+    flex-wrap: wrap;
   }
-  
-  .arrow-2 {
-    animation-delay: 0.6s;
-  }
-  .arrow-3 {
-    animation-delay: 0.9s;
-  }
-  
-  @keyframes bounce {
-    0% {
-      transform: translate(-50%, 0);
-    }
-    50% {
-      transform: translate(-50%, 10px);
-    }
-    100% {
-      transform: translate(-50%, 0);
-    }
-  }
-  
-  /* Hinzugefügte CSS-Regeln für Trennlinien */
-  .project-box:not(:last-child) {
+
+  .project-box img {
+    flex: 0 0 30%;
+    /* Hier kannst du die Breite anpassen */
+    margin-right: 20px;
     margin-bottom: 20px;
-    padding-bottom: 20px;
   }
-  
-  .project-line {
-    border-top: 1px solid red;
-    display: none;
+
+  .project-box .project-info {
+    flex: 0 0 60%;
+    /* Hier kannst du die Breite anpassen */
   }
-  
-  .project:not(:last-child) .project-line {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    display: block;
+
+  .project-box .project-info h3 {
+    margin-top: 0;
   }
-  
-  .project.last-visible-project .project-line {
-    display: none;
+}
+
+/* Scroll-Down-Pfeile */
+.scroll-down-arrows {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 2s infinite;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  margin: 10px 20px;
+}
+
+.arrow-1 {
+  animation-delay: 0.3s;
+}
+
+.arrow-2 {
+  animation-delay: 0.6s;
+}
+
+.arrow-3 {
+  animation-delay: 0.9s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, 0);
   }
-  
-  .project-line {
-    width: 100%;
-    height: 2px;
-    background-color: red;
-    margin-top: 20px;
+
+  50% {
+    transform: translate(-50%, 10px);
   }
-  
-  .project-list .project-box.alternate-background {
-    background-color: #520202;
+
+  100% {
+    transform: translate(-50%, 0);
   }
-  
-  @media (max-width: 767px) {
-    .project-list {
-      margin-left: 5%;
-      margin-right: 5%;
-    }
+}
+
+@keyframes bounceScale {
+  0% {
+    scale: 1;
   }
-  
+
+  50% {
+    scale: .9;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+/* Hinzugefügte CSS-Regeln für Trennlinien */
+.project-box:not(:last-child) {
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+.project-line {
+  border-top: 4px solid var(--accentSuperLight-color);
+  border-radius: 4px;
+  display: none;
+  width: 60%;
+  height: 2px;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+
+.project:not(:last-child) .project-line {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-bottom: 0px;
+  display: block;
+}
+
+.project.last-visible-project .project-line {
+  display: none;
+}
+
+.project-list .project-box.alternate-background {
+  background-color: var(--shadow-color);
+}
+
+#impressum {
+  padding-top: 5em;
+  width: 100vw;
+  border-top: 4px solid var(--accentSuperLight-color);
+  padding-bottom: 5em;
+}
+
+@media (max-width: 767px) {
+  .project-list {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

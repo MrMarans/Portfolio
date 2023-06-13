@@ -39,6 +39,9 @@ document.querySelectorAll('.menu ul li a').forEach(link => {
     scrollDownArrows.addEventListener('click', function() {
       projectsSection.scrollIntoView({ behavior: 'smooth' });
     });
+
+    //Timeline zeug
+    
   });
   
 
@@ -108,9 +111,37 @@ function updateProjects() {
   });
   
   // Füge die Trennlinien und Hintergrundfarben beim Laden der Webseite hinzu
-  window.addEventListener('load', updateProjects);
+  window.addEventListener('load', updateProjects /*toggleProjectDetails*/ );
 
-  function toggleProjectDetails(project) {
-    project.parentNode.classList.toggle('expanded');
+  async function toggleProjectDetails(project) {
+   const obj = document.getElementById("transition");
+   obj.style.transition = "width 0.25s ease-in";
+   obj.style.width = "100%";
+   obj.style.right = "auto";
+   await new Promise(resolve => setTimeout(resolve, 250));
+   const img = document.getElementById("Logo");
+  img.style.filter="blur(0px)";
+  img.style.opacity="1";
+  await new Promise(resolve => setTimeout(resolve, 500));
+  await new Promise(resolve => setTimeout(resolve, 250)); //wait until dissolve
+  img.style.opacity="0";
+  img.style.filter="blur(5px)";
+   await new Promise(resolve => setTimeout(resolve, 500));
+    obj.style.transition = "width 0.25s ease-out";
+    obj.style.width = "0%";
+    obj.style.right = "0px";
   }
-  
+  //button color
+  const buttons = document.querySelectorAll('.filter-button');
+
+buttons.forEach(button => {
+  button.addEventListener('click', function() {
+    // Alle Buttons zurücksetzen
+    buttons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    // Aktuellen Button hervorheben
+    this.classList.add('active');
+  });
+});

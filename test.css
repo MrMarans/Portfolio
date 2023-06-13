@@ -1,0 +1,37 @@
+.timeline {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+  }
+  
+  .line {
+    position: absolute;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -1px; /* Halbe Höhe der Linie, um sie zentriert zu positionieren */
+  }
+  
+  .text {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+  }
+  
