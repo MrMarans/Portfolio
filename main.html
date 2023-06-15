@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <title>Ron Metzger</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -10,92 +11,104 @@
   <div id="transition">
     <img src="preview.jpg" id="Logo">
   </div>
- <div id="projects-container">
-
-  </div>
-  <div style="display: none;">
-  <div class="fullscreen-video">
-    <video id="myVideo" autoplay loop muted>
-      <source src="video.mp4" type="video/mp4">
-    </video>
-    <div class="content">
-      <h1 class="animated-text">Ron Metzger</h1>
-    </div>
-    <div class="scroll-down-arrows">
-      <div class="arrow arrow-1"></div>
-      <div class="arrow arrow-2"></div>
-      <div class="arrow arrow-3"></div>
-    </div>
-  </div>
-
-  <nav class="menu">
+  <div id="projects-container" style="display: block;">
+    <h3 class="ProjectTitle">3D Print Helper App</h3>
+    <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den Demonstrator hinaus gingen.</p>
+    <h4 class="ProjectSubTitle">Schnellüberblick</h4>
     <ul>
-      <li><a href="#aboutMe">About Me</a></li>
-      <li><a href="#projects">Projekte</a></li>
-      <li><a href="#impressum">Impressum</a></li>
+      <li>Unity</li>
+      <li>Vuforia fur AR Objekterkennung f ̈ur Android</li>
+      <li>Agora fur Voice- und Videochat</li>
+      <li>Mirror fur Multiplayer</li>
+      <li>Einzelprojekt</li>
+      <li>Projektdauer: 3 Wochen</li>
     </ul>
-  </nav>
-
-  <div id="aboutMe topline" class="section">
-
-    <div id="timeline">
-      <div class="line">
-        <div class="circle">
-          <h2 style="display: none;" class="StepsLebenslauf">Bachelor<br>Medienkonzeption</h2>
-          <p class="StepsLebenslaufText" style="display: none;">Medienkonzeption <br> 3D
-            Modeling<br>Animation<br>VFX<br>Interaktionsdesign</p>
-        </div>
-        <div class="circle" id="circle2"></div>
-        <div class="circle" id="circle3"></div>
-        <div class="circle" id="circle4"></div>
-      </div>
-    </div>
-
-
-
   </div>
-
-  <div id="projects" class="section topline" style="padding-top: 10em; padding-bottom: 5em;">
-    <h2 style="margin-bottom: 1em;">Meine Projekte</h2>
-    <div class="filter-buttons">
-      <button class="filter-button" data-category="Alle">Alle</button>
-      <button class="filter-button" data-category="xr">XR</button>
-      <button class="filter-button" data-category="microcontroller">Microcontroller</button>
-      <button class="filter-button" data-category="video">Video</button>
-      <button class="filter-button" data-category="sonstige">Sonstige</button>
-    </div>
-
-
-
-
-    <div class="projects">
-      <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
-        <div class="imgBox"><img src="preview.jpg" class="imges"></div>
-        <div class="TextBox">
-          <h2 class="Title">Mikro</h2>
-          <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+    
+    
+    <div id="MainSite" style="display: none;">
+      <div class="fullscreen-video">
+        <video id="myVideo" autoplay loop muted>
+          <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <h1 class="animated-text">Ron Metzger</h1>
+        </div>
+        <div class="scroll-down-arrows">
+          <div class="arrow arrow-1"></div>
+          <div class="arrow arrow-2"></div>
+          <div class="arrow arrow-3"></div>
         </div>
       </div>
 
-      <div class="SingleProject video" onclick="toggleProjectDetails(this)">
-        <div class="imgBox"><img src="preview.jpg" class="imges"></div>
-        <div class="TextBox">
-          <h2 class="Title">video</h2>
-          <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+      <nav class="menu">
+        <ul>
+          <li><a href="#aboutMe">About Me</a></li>
+          <li><a href="#projects">Projekte</a></li>
+          <li><a href="#impressum">Impressum</a></li>
+        </ul>
+      </nav>
+
+      <div id="aboutMe topline" class="section">
+
+        <div id="timeline">
+          <div class="line">
+            <div class="circle">
+              <h2 style="display: none;" class="StepsLebenslauf">Bachelor<br>Medienkonzeption</h2>
+              <p class="StepsLebenslaufText" style="display: none;">Medienkonzeption <br> 3D
+                Modeling<br>Animation<br>VFX<br>Interaktionsdesign</p>
+            </div>
+            <div class="circle" id="circle2"></div>
+            <div class="circle" id="circle3"></div>
+            <div class="circle" id="circle4"></div>
+          </div>
         </div>
-      </div>
-      <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
-        <div class="imgBox"><img src="preview.jpg" class="imges"></div>
-        <div class="TextBox">
-          <h2 class="Title">Mikro</h2>
-          <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
-        </div>
-      </div>
-    </div>
-  
 
 
-    <!-- <div class="project-list">
+
+      </div>
+
+      <div id="projects" class="section topline" style="padding-top: 10em; padding-bottom: 5em;">
+        <h2 style="margin-bottom: 1em;">Meine Projekte</h2>
+        <div class="filter-buttons">
+          <button class="filter-button" data-category="Alle">Alle</button>
+          <button class="filter-button" data-category="xr">XR</button>
+          <button class="filter-button" data-category="microcontroller">Microcontroller</button>
+          <button class="filter-button" data-category="video">Video</button>
+          <button class="filter-button" data-category="sonstige">Sonstige</button>
+        </div>
+
+
+
+
+        <div class="projects">
+          <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
+            <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+            <div class="TextBox">
+              <h2 class="Title">Mikro</h2>
+              <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+            </div>
+          </div>
+
+          <div class="SingleProject video" onclick="toggleProjectDetails(this)">
+            <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+            <div class="TextBox">
+              <h2 class="Title">video</h2>
+              <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+            </div>
+          </div>
+          <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
+            <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+            <div class="TextBox">
+              <h2 class="Title">Mikro</h2>
+              <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- <div class="project-list">
     
     
     
@@ -148,14 +161,14 @@
       </div>
     </div>-->
 
-  </div>
-  <div id="impressum" class="section topline">
-    <h2>Impressum</h2>
-    <p>Impressum Text</p>
-  </div>
-</div>
+      </div>
+      <div id="impressum" class="section topline">
+        <h2>Impressum</h2>
+        <p>Impressum Text</p>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

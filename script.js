@@ -161,10 +161,13 @@ async function toggleProjectDetails(project) {
   obj.style.width = "100%";
   obj.style.right = "auto";
   await new Promise(resolve => setTimeout(resolve, 250));
+  document.getElementById("MainSite").style.display="none";
   const img = document.getElementById("Logo");
   img.style.filter = "blur(0px)";
   img.style.opacity = "1";
   await new Promise(resolve => setTimeout(resolve, 500));
+  document.getElementById("projects-container").style.display = "block";
+
   await new Promise(resolve => setTimeout(resolve, 250)); //wait until dissolve
   img.style.opacity = "0";
   img.style.filter = "blur(5px)";
@@ -245,7 +248,7 @@ circles.forEach(circle => {
 
 
 
-//open text
+//open text legacy
 function loadJSONFile(name) {
   fetch('texte.json')
     .then(response => response.json())
@@ -259,25 +262,28 @@ function loadJSONFile(name) {
       data.projects.forEach(project => {
         // Überprüfe, ob der aktuelle Projekttitel mit dem ausgewählten Projekt übereinstimmt
         if (project.title === selectedProject) {
-          // Erstelle die HTML-Elemente und füge sie dem Container hinzu
-          const projectElement = document.createElement('div');
-          const titleElement = document.createElement('h2');
-          const descriptionElement = document.createElement('p');
-          const youtubeLinkElement = document.createElement('a');
-          const imageElement = document.createElement('img');
 
+          const titleElement = document.createElement('h2');
           titleElement.textContent = project.title;
+          projectsContainer.appendChild(titleElement);
+          titleElement.classList.add('ProjectTitle');
+
+          const descriptionElement = document.createElement('p');
           descriptionElement.textContent = project.description;
+          projectsContainer.appendChild(descriptionElement);
+
+          if(project.youtubeLink!=null){
+          const youtubeLinkElement = document.createElement('a');
           youtubeLinkElement.textContent = "YouTube Video ansehen";
           youtubeLinkElement.href=project.youtubeLink;
+          projectsContainer.appendChild(youtubeLinkElement);
+          }
+
+          if(project.imagePath!=null){
+          const imageElement = document.createElement('img');       
           imageElement.src = project.imagePath;
-
-          projectElement.appendChild(titleElement);
-          projectElement.appendChild(descriptionElement);
-          projectElement.appendChild(youtubeLinkElement);
-          projectElement.appendChild(imageElement);
-
-          projectsContainer.appendChild(projectElement);
+          projectsContainer.appendChild(imageElement);
+          }
         }
       });
     })
@@ -285,4 +291,4 @@ function loadJSONFile(name) {
       console.log('Fehler beim Laden der JSON-Datei:', error);
     });
 }
-loadJSONFile("Projekt 1");
+//loadJSONFile("Projekt 1");

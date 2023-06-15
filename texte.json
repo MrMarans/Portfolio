@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "Projekt 1",
-      "description": "Beschreibung des Projekts 1",
+      "description": "Der Prototyp nutzt zwei Systeme, die bei größerem Nutzen auf alle Fälle kostenpflichtig wären (Agora und Vuforia). Die Verbindung durch Mirror benötigt leider die Eingabe einer IP, da kein Matchmaking hierfür erstellt wurde. Die IP Adresse wird jedoch immer beim Nutzer auf dem Bildschirm dargestellt, sodass der Support, sobald er sich mit dem Videofeed verbunden hat, selber ablesen kann. Auch kann immer nur eine Connection gleichzeitig bestehen, also nur ein Nutzer mit einem Supporter. Mehrere Connections wurden im Zuge dessen, weil es sich um einen Demonstrator handelt, nicht umgesetzt. Diese Einschränkungen sind jedoch mit deutlich mehr Zeitaufwand alle möglich aufzuheben.<br>",
       "youtubeLink": "https://www.youtube.com/watch?v=VIDEO_ID_1",
       "imagePath": "images/project1.jpg"
     },

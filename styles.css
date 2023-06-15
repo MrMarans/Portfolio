@@ -532,10 +532,35 @@ ul {
   height: 100vw;
   width: 100%;
   z-index: 9999;
-  background-color: var(--transition-color);
+  background-color: var(--white-color);
   transition: width 0.3s ease-in;
   filter: blur(0, 60px);
-  background-color: green;
   align-content: center;
   justify-content: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.ProjectTitle{
+  margin-top: 2em;
+ font-size: 3em;
+}
+
+.ProjektDescriptionText{
+  margin-top: 2em;
+}
+.ProjectSubTitle{
+  margin-top: 2em;
+  font-size: 2em;
+  color: white;
+}
+
+ul {
+  list-style-type: disc; /* Standard, gefüllte Kreise */
+  margin-top: 0.5em;
+  padding-left: 2em;
+  color: white;
+}
+li{
+  margin-top: 0.25em;
 }
