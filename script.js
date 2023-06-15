@@ -251,14 +251,27 @@ function loadJSONFile() {
   fetch('texte.json')
     .then(response => response.json())
     .then(data => {
-      const textContainer = document.getElementById('ShowClickedProject');
-      data.texts.forEach(text => {
-        const paragraph = document.createElement('p');
-        paragraph.textContent = text;
-        textContainer.appendChild(paragraph);
+      const projectsContainer = document.getElementById('projects-container');
+      data.projects.forEach(project => {
+        const projectElement = document.createElement('div');
+        const titleElement = document.createElement('h2');
+        const descriptionElement = document.createElement('p');
+        const imageElement = document.createElement('img');
+
+        titleElement.textContent = project.title;
+        descriptionElement.textContent = project.description;
+        imageElement.src = project.imagePath;
+
+        projectElement.appendChild(titleElement);
+        projectElement.appendChild(descriptionElement);
+        projectElement.appendChild(imageElement);
+
+        projectsContainer.appendChild(projectElement);
       });
     })
     .catch(error => {
       console.log('Fehler beim Laden der JSON-Datei:', error);
     });
 }
+
+loadJSONFile();

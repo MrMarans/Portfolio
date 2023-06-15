@@ -1,7 +1,22 @@
 {
-  "texts": [
-    "Text 1",
-    "Text 2",
-    "Text 3"
+  "projects": [
+    {
+      "title": "Projekt 1",
+      "description": "Beschreibung des Projekts 1",
+      "youtubeLink": "https://www.youtube.com/watch?v=VIDEO_ID_1",
+      "imagePath": "images/project1.jpg"
+    },
+    {
+      "title": "Projekt 2",
+      "description": "Beschreibung des Projekts 2",
+      "youtubeLink": "https://www.youtube.com/watch?v=VIDEO_ID_2",
+      "imagePath": "images/project1.jpg"
+    },
+    {
+      "title": "Projekt 3",
+      "description": "Beschreibung des Projekts 3",
+      "youtubeLink": "https://www.youtube.com/watch?v=VIDEO_ID_3",
+      "imagePath": "images/project1.jpg"
+    }
   ]
 }
