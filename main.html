@@ -10,7 +10,9 @@
   <div id="transition">
     <img src="preview.jpg" id="Logo">
   </div>
-
+ <div id="ShowClickedProject">
+  </div>
+  <div style="display: none;">
   <div class="fullscreen-video">
     <video id="myVideo" autoplay loop muted>
       <source src="video.mp4" type="video/mp4">
@@ -33,22 +35,26 @@
     </ul>
   </nav>
 
-  <div id="aboutMe" class="section">Yolo ay<br>
+  <div id="aboutMe topline" class="section">
 
     <div id="timeline">
       <div class="line">
-       <div class="circle"><h2 style="display: none;" class="StepsLebenslauf">Bachelor<br>Medienkonzeption</h2><p class="StepsLebenslaufText" style="display: none;">Medienkonzeption <br> 3D Modeling<br>Animation<br>VFX<br>Interaktionsdesign</p></div>     
-       <div class="circle" id="circle2"></div> 
-       <div class="circle" id="circle3"></div> 
-       <div class="circle" id="circle4"></div>
+        <div class="circle">
+          <h2 style="display: none;" class="StepsLebenslauf">Bachelor<br>Medienkonzeption</h2>
+          <p class="StepsLebenslaufText" style="display: none;">Medienkonzeption <br> 3D
+            Modeling<br>Animation<br>VFX<br>Interaktionsdesign</p>
+        </div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle" id="circle3"></div>
+        <div class="circle" id="circle4"></div>
+      </div>
     </div>
-  </div>
 
 
 
   </div>
 
-  <div id="projects" class="section" style="padding-top: 10em; padding-bottom: 5em;">
+  <div id="projects" class="section topline" style="padding-top: 10em; padding-bottom: 5em;">
     <h2 style="margin-bottom: 1em;">Meine Projekte</h2>
     <div class="filter-buttons">
       <button class="filter-button" data-category="Alle">Alle</button>
@@ -57,8 +63,44 @@
       <button class="filter-button" data-category="video">Video</button>
       <button class="filter-button" data-category="sonstige">Sonstige</button>
     </div>
-    <div class="project-list">
-      <div class="project xr">
+
+
+
+
+    <div class="projects">
+      <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
+        <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+        <div class="TextBox">
+          <h2 class="Title">Mikro</h2>
+          <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+        </div>
+      </div>
+
+      <div class="SingleProject video" onclick="toggleProjectDetails(this)">
+        <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+        <div class="TextBox">
+          <h2 class="Title">video</h2>
+          <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+        </div>
+      </div>
+      <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
+        <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+        <div class="TextBox">
+          <h2 class="Title">Mikro</h2>
+          <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+        </div>
+      </div>
+    </div>
+  
+
+
+    <!-- <div class="project-list">
+    
+    
+    
+    
+    
+        <div class="project xr">
         <div class="project-box" onclick="toggleProjectDetails(this)">
           <img src="preview.jpg" alt="Projekt 3">
           <div class="project-info">
@@ -103,13 +145,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
   </div>
-  <div id="impressum" class="section">
+  <div id="impressum" class="section topline">
     <h2>Impressum</h2>
     <p>Impressum Text</p>
   </div>
+</div>
 
   <script src="script.js"></script>
 </body>

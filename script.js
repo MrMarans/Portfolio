@@ -1,3 +1,13 @@
+
+window.addEventListener('load', reverseElements);
+window.addEventListener('load', updateProjectsBG);
+window.addEventListener('load', loadJSONFile );
+// Animation für den Willkommen-Text
+window.addEventListener('load', () => {
+  const animatedText = document.querySelector('.animated-text');
+  animatedText.style.opacity = '1';
+});
+
 // Scroll-Animation für Menü-Links
 document.querySelectorAll('.menu ul li a').forEach(link => {
   link.addEventListener('click', (event) => {
@@ -23,11 +33,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Animation für den Willkommen-Text
-window.addEventListener('load', () => {
-  const animatedText = document.querySelector('.animated-text');
-  animatedText.style.opacity = '1';
-});
+
 
 
 
@@ -44,9 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-
+//LEGACY CODE
 // Funktion zum Hinzufügen der Trennlinien und Aktualisieren der Hintergrundfarben
-function updateProjects() {
+/*function updateProjects() {
   const projectBoxes = document.querySelectorAll('.project-box');
   const visibleProjects = Array.from(projectBoxes).filter(box => box.parentElement.style.display !== 'none');
 
@@ -67,18 +73,33 @@ function updateProjects() {
       box.classList.add('alternate-background');
     }
   });
+}*/
+
+
+
+function updateProjectsBG() {
+  const projectBoxes = document.querySelectorAll('.SingleProject');
+  const visibleProjects = Array.from(projectBoxes).filter(box => box.style.display !== 'none');
+  projectBoxes.forEach(box => box.classList.remove('alternate-background'));
+  visibleProjects.forEach((box, index) => {
+    if (index % 2 === 1) {
+      box.classList.add('alternate-background');
+      console.log(index);
+      index++;
+    }
+  });
 }
 
 // Projekte filtern
 document.querySelectorAll('.filter-button').forEach(button => {
   button.addEventListener('click', () => {
     const category = button.getAttribute('data-category');
-    const projects = document.querySelectorAll('.project');
+    const projects = document.querySelectorAll('.SingleProject');
 
     // Füge zuerst eine Fade-Out-Animation hinzu
     projects.forEach(project => {
       project.style.opacity = '0';
-      project.style.transition = 'opacity 0.3s ease-out';
+
     });
 
     setTimeout(() => {
@@ -90,7 +111,7 @@ document.querySelectorAll('.filter-button').forEach(button => {
       // Filtere die Projekte basierend auf der Kategorie
       const filteredProjects = category === 'Alle'
         ? projects
-        : document.querySelectorAll(`.project.${category}`);
+        : document.querySelectorAll(`.SingleProject.${category}`);
 
       // Zeige die gefilterten Projekte an
       filteredProjects.forEach(project => {
@@ -98,20 +119,42 @@ document.querySelectorAll('.filter-button').forEach(button => {
       });
 
       // Führe das Update für Trennlinien und Hintergrundfarben durch
-      updateProjects();
-
+      reverseElements();
+      updateProjectsBG();
       // Füge dann eine Fade-In-Animation hinzu
       setTimeout(() => {
         filteredProjects.forEach(project => {
           project.style.opacity = '1';
+          project.style.transition = '';
         });
       }, 100);
     }, 300);
   });
 });
 
-// Füge die Trennlinien und Hintergrundfarben beim Laden der Webseite hinzu
-window.addEventListener('load', updateProjects /*toggleProjectDetails*/);
+function reverseElements() {
+  console.log("Reverse");
+  const singleProjects = document.querySelectorAll('.SingleProject');
+  const visibleProjects = Array.from(singleProjects).filter(box => box.style.display !== 'none');
+
+  visibleProjects.forEach((project, index) => {
+    console.log(project);
+    const imgBox = project.querySelector('.imgBox');
+    const title = project.querySelector('.TextBox');
+
+    // Überprüfen der Index-Position
+    if (index % 2 === 0) {
+      // Gerade Index-Position: div zuerst, dann h2
+      project.insertBefore(imgBox, title);
+    } else {
+      // Ungerade Index-Position: h2 zuerst, dann div
+      project.insertBefore(title, imgBox);
+    }
+  });
+}
+
+
+
 
 async function toggleProjectDetails(project) {
   const obj = document.getElementById("transition");
@@ -200,3 +243,22 @@ circles.forEach(circle => {
     });
   });
 });
+
+
+
+//open text
+function loadJSONFile() {
+  fetch('texte.json')
+    .then(response => response.json())
+    .then(data => {
+      const textContainer = document.getElementById('ShowClickedProject');
+      data.texts.forEach(text => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = text;
+        textContainer.appendChild(paragraph);
+      });
+    })
+    .catch(error => {
+      console.log('Fehler beim Laden der JSON-Datei:', error);
+    });
+}

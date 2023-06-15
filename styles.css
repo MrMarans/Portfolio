@@ -7,6 +7,8 @@
   --accentlight-color: #d415a1;
   --accent-color: #a70f7e;
   --accentShadow-color: #860563;
+  --accentDark-color: #53033e;
+  --accentSuperDark-color: #3f032f;
 }
 
 /* Basis-Styles */
@@ -100,16 +102,16 @@ p {
   transition: all .3s ease-in-out;
 }
 
-.circle:hover{
-  background-color:  var(--transition-color);
+.circle:hover {
+  background-color: var(--transition-color);
 }
 
-.circleClicked{
+.circleClicked {
   background-color: var(--accentSuperLight-color) !important;
 }
 
-.visible{
- opacity: 1; 
+.visible {
+  opacity: 1;
 }
 
 
@@ -445,9 +447,12 @@ ul {
 
 #impressum {
   padding-top: 5em;
-  width: 100vw;
-  border-top: 4px solid var(--accentSuperLight-color);
+  width: 100%;
   padding-bottom: 5em;
+}
+
+.topline{
+  border-top: 5px solid var(--accentSuperLight-color);
 }
 
 @media (max-width: 767px) {
@@ -455,4 +460,82 @@ ul {
     margin-left: 5%;
     margin-right: 5%;
   }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.SingleProject{
+  display: flex;
+  position: relative;
+  width:100%;
+  height: 20vw;
+  background-color: var(--accentSuperDark-color);
+  transition: all .3s ease-in-out;
+}
+
+.SingleProject.alternate-background{
+  background-color: var(--accentDark-color) !important;
+}
+
+.SingleProject:hover
+{
+  background-color: var(--accentlight-color) !important;
+  scale: 1.01;
+  cursor: pointer ;
+}
+
+
+.SingleProject:hover > .imgBox{
+  filter: brightness(1.1);
+}
+
+.imgBox {
+  background-color: yellow;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+}
+
+
+.imges {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20vw;
+  width: 20vw;
+}
+
+.TextBox {
+  position: relative;
+  margin-top: 5%;
+  flex:1;
+
+}
+.Title{
+  font-size: 4vw !important;
+}
+.paragraph{
+  margin-left: 30%;
+  margin-right: 30%;
+  white-space: pre-wrap;
+  font-size: 1.5vw;
+}
+
+#ShowClickedProject{
+  position: fixed;
+  height: 100vw;
+  width: 100%;
+  z-index: 9999;
+  background-color: var(--transition-color);
+  transition: width 0.3s ease-in;
+  filter: blur(0, 60px);
+  background-color: green;
+  align-content: center;
+  justify-content: center;
 }
