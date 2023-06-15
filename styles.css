@@ -48,6 +48,8 @@ p {
 #aboutMe {
   background-color: var(--accentShadow-color);
   color: white;
+  padding-top: 7em;
+  padding-bottom: 22em;
 }
 
 #timeline {
@@ -59,30 +61,55 @@ p {
 
 .line {
   position: absolute;
+  display: flex;
   height: 2px;
-  background-color: #000;
   top: 50%;
   right: 0;
-  width: 50%;
-  left: 25%;
+  width: 70%;
+  height: 30px;
+  left: 15%;
+  border-top: 1px solid white;
 }
 
-.point {
-  display: absolute;
-  left: 25%;
-  right: 0%;
-  width: 100px;
-  height: 100px;
-  background-color: red;
+.StepsLebenslauf {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 1em);
+  opacity: 0;
+  transition: all .1s ease-out;
 }
+
+.StepsLebenslaufText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 5.5em);
+  opacity: 0;
+  transition: all .1s ease-out;
+}
+
 
 .circle {
-  display: relative;
-  top: 0%;
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  width: 4vw;
+  height: 4vw;
   border-radius: 50%;
-  background-color: #000;
+  background-color: var(--shadow-color);
+  transform: translateY(-2vw);
+  transition: all .3s ease-in-out;
+}
+
+.circle:hover{
+  background-color:  var(--transition-color);
+}
+
+.circleClicked{
+  background-color: var(--accentSuperLight-color) !important;
+}
+
+.visible{
+ opacity: 1; 
 }
 
 
