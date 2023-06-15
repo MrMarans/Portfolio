@@ -11,6 +11,10 @@
   --accentSuperDark-color: #3f032f;
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 /* Basis-Styles */
 * {
   margin: 0;
