@@ -527,7 +527,7 @@ ul {
   font-size: 1.5vw;
 }
 
-#ShowClickedProject{
+#projects-container{
   position: fixed;
   height: 100vw;
   width: 100%;

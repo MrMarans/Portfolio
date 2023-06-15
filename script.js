@@ -1,7 +1,6 @@
 
 window.addEventListener('load', reverseElements);
 window.addEventListener('load', updateProjectsBG);
-window.addEventListener('load', loadJSONFile );
 // Animation für den Willkommen-Text
 window.addEventListener('load', () => {
   const animatedText = document.querySelector('.animated-text');
@@ -247,31 +246,43 @@ circles.forEach(circle => {
 
 
 //open text
-function loadJSONFile() {
+function loadJSONFile(name) {
   fetch('texte.json')
     .then(response => response.json())
     .then(data => {
       const projectsContainer = document.getElementById('projects-container');
+      
+      // Hier wird das gewünschte Projekt ausgewählt
+      const selectedProject = name;
+      
+      // Iteriere über die Projekte in der JSON-Datei
       data.projects.forEach(project => {
-        const projectElement = document.createElement('div');
-        const titleElement = document.createElement('h2');
-        const descriptionElement = document.createElement('p');
-        const imageElement = document.createElement('img');
+        // Überprüfe, ob der aktuelle Projekttitel mit dem ausgewählten Projekt übereinstimmt
+        if (project.title === selectedProject) {
+          // Erstelle die HTML-Elemente und füge sie dem Container hinzu
+          const projectElement = document.createElement('div');
+          const titleElement = document.createElement('h2');
+          const descriptionElement = document.createElement('p');
+          const youtubeLinkElement = document.createElement('a');
+          const imageElement = document.createElement('img');
 
-        titleElement.textContent = project.title;
-        descriptionElement.textContent = project.description;
-        imageElement.src = project.imagePath;
+          titleElement.textContent = project.title;
+          descriptionElement.textContent = project.description;
+          youtubeLinkElement.textContent = "YouTube Video ansehen";
+          youtubeLinkElement.href=project.youtubeLink;
+          imageElement.src = project.imagePath;
 
-        projectElement.appendChild(titleElement);
-        projectElement.appendChild(descriptionElement);
-        projectElement.appendChild(imageElement);
+          projectElement.appendChild(titleElement);
+          projectElement.appendChild(descriptionElement);
+          projectElement.appendChild(youtubeLinkElement);
+          projectElement.appendChild(imageElement);
 
-        projectsContainer.appendChild(projectElement);
+          projectsContainer.appendChild(projectElement);
+        }
       });
     })
     .catch(error => {
       console.log('Fehler beim Laden der JSON-Datei:', error);
     });
 }
-
-loadJSONFile();
+loadJSONFile("Projekt 1");
