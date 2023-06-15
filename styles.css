@@ -507,7 +507,7 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 20vw;
+  height: auto;
   width: 20vw;
 }
 
@@ -528,15 +528,11 @@ ul {
 }
 
 #projects-container{
-  position: fixed;
-  height: 100vw;
+  position: absolute;
   width: 100%;
+  overflow: auto;
   z-index: 9999;
   background-color: var(--white-color);
-  transition: width 0.3s ease-in;
-  filter: blur(0, 60px);
-  align-content: center;
-  justify-content: center;
   padding-left: 20%;
   padding-right: 20%;
 }

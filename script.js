@@ -166,9 +166,8 @@ async function toggleProjectDetails(project) {
   img.style.filter = "blur(0px)";
   img.style.opacity = "1";
   await new Promise(resolve => setTimeout(resolve, 500));
-  document.getElementById("projects-container").style.display = "block";
-
   await new Promise(resolve => setTimeout(resolve, 250)); //wait until dissolve
+  document.getElementById("projects-container").style.display = "block";
   img.style.opacity = "0";
   img.style.filter = "blur(5px)";
   await new Promise(resolve => setTimeout(resolve, 500));
