@@ -604,9 +604,10 @@ li{
   margin: 5px; /* Abstand zwischen den Bildern anpassen */
   
   
-  width: 3vw;
+  width: 4vw;
   height: auto;
 }
 iframe{
   width: 100%;
+  height: auto;
 }
