@@ -17,6 +17,12 @@
       "description": "Beschreibung des Projekts 3",
       "youtubeLink": "https://www.youtube.com/watch?v=VIDEO_ID_3",
       "imagePath": "images/project1.jpg"
+    },
+    {
+      "title": "Projekt 3",
+      "description": "Beschreibung des Projekts 3",
+      "youtubeLink": "https://www.youtube.com/watch?v=VIDEO_ID_3",
+      "imagePath": "images/project1.jpg"
     }
   ]
 }

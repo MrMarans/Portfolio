@@ -14,7 +14,7 @@
 
     
     
-    <div id="MainSite" style="display: block;">
+    <div id="MainSite" style="display: none;">
       <div class="fullscreen-video">
         <video id="myVideo" autoplay loop muted>
           <source src="video.mp4" type="video/mp4">
@@ -70,7 +70,7 @@
 
 
         <div class="projects">
-          <div class="SingleProject xr" onclick="toggleProjectDetails(this)">
+          <div class="SingleProject xr" onclick="toggleProjectDetails('MainSite','3DPrint')">
             <div class="imgBox"><img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" class="imges"></div>
             <div class="TextBox">
               <h2 class="Title">3D Drucker Support App</h2>
@@ -165,7 +165,10 @@
 
 
 
-    <div id="projects-container" style="display: none;">
+    <div id="projects-container" style="display: block;">
+      <div id="backButton" onclick="toggleProjectDetails('3DPrint','MainSite')"><</div>
+       <div id="3DPrint" style="display: blocks; margin-bottom: 5em;">
+ 
       <h3 class="ProjectTitle">3D Print Helper App</h3>
       <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den Demonstrator hinaus gingen.</p>
       <h4 class="ProjectSubTitle">Schnellüberblick</h4>
@@ -197,7 +200,19 @@
         <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den Demonstrator hinaus gingen.</p>
     <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
     <p class="ProjektDescriptionText">Der Prototyp nutzt zwei Systeme, die bei größerem Nutzen auf alle Fälle kostenpflichtig wären (Agora und Vuforia). Die Verbindung durch Mirror benötigt leider die Eingabe einer IP, da kein Matchmaking hierfür erstellt wurde. Die IP Adresse wird jedoch immer beim Nutzer auf dem Bildschirm dargestellt, sodass der Support, sobald er sich mit dem Videofeed verbunden hat, selber ablesen kann. Auch kann immer nur eine Connection gleichzeitig bestehen, also nur ein Nutzer mit einem Supporter. Mehrere Connections wurden im Zuge dessen, weil es sich um einen Demonstrator handelt, nicht umgesetzt. Diese Einschränkungen sind jedoch mit deutlich mehr Zeitaufwand alle möglich aufzuheben.</p>
-      </div>
+    <div class="container">
+      <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
+      <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
+      <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
+      <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
+      <!-- Weitere Bilder hier einfügen -->
+    </div>
+    
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" 
+    frameborder="0" allow="accelerometer; autoplay; 
+    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

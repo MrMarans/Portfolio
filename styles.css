@@ -549,6 +549,9 @@ ul {
 .ProjektDescriptionText{
   margin-top: 2em;
 }
+.ProjektDescriptionText:last-of-type{
+  margin-bottom: 5em;
+}
 .ProjectSubTitle{
   margin-top: 2em;
   font-size: 2em;
@@ -563,4 +566,47 @@ ul {
 }
 li{
   margin-top: 0.25em;
+}
+
+#backButton{
+  display: flex;
+  position: fixed;
+  left:6%;
+  top: 50%;
+  width: 6vw;
+  max-height: 50px;
+  height: 6vw;
+  max-width: 50px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  transform: translateY(-2vw);
+  transition: all .3s ease-in-out;
+ justify-content: center;
+ align-items: center;
+}
+#backButton:hover{
+  cursor: pointer;
+  background-color: var(--accentShadow-color);
+}
+
+.SmartphoneImage{
+  width: 30vw;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container img {
+  flex: 1 0 5vw; /* Flex-Grow, Flex-Shrink und Basisbreite anpassen */
+  margin: 5px; /* Abstand zwischen den Bildern anpassen */
+  
+  
+  width: 3vw;
+  height: auto;
+}
+iframe{
+  width: 100%;
 }

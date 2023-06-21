@@ -155,19 +155,26 @@ function reverseElements() {
 
 
 
-async function toggleProjectDetails(project) {
+async function toggleProjectDetails(deactivate, activate) {
   const obj = document.getElementById("transition");
   obj.style.transition = "width 0.25s ease-in";
   obj.style.width = "100%";
   obj.style.right = "auto";
   await new Promise(resolve => setTimeout(resolve, 250));
-  document.getElementById("MainSite").style.display="none";
+  document.getElementById(deactivate).style.display="none";
   const img = document.getElementById("Logo");
   img.style.filter = "blur(0px)";
   img.style.opacity = "1";
   await new Promise(resolve => setTimeout(resolve, 500));
   await new Promise(resolve => setTimeout(resolve, 250)); //wait until dissolve
-  document.getElementById("projects-container").style.display = "block";
+  const projectContainer =  document.getElementById("projects-container");
+  if(projectContainer.style.display == "none")
+   { projectContainer.style.display = "block";}
+   else
+   {
+     projectContainer.style.display = "none";
+   }
+   document.getElementById(activate).style.display="block";
   img.style.opacity = "0";
   img.style.filter = "blur(5px)";
   await new Promise(resolve => setTimeout(resolve, 500));
@@ -236,11 +243,7 @@ circles.forEach(circle => {
         setTimeout(function () {
           child.style.display = "none";
         }, 100);
-
       }
-
-
-
     });
   });
 });
