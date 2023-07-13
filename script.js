@@ -156,6 +156,10 @@ function reverseElements() {
 
 
 async function toggleProjectDetails(deactivate, activate) {
+  var activateString = activate.String
+  document.getElementById("backButton").onclick = function() {
+    toggleProjectDetails(activate,deactivate);
+  }; 
   const obj = document.getElementById("transition");
   obj.style.transition = "width 0.25s ease-in";
   obj.style.width = "100%";

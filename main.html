@@ -12,98 +12,100 @@
     <img src="preview.jpg" id="Logo">
   </div>
 
-    
-    
-    <div id="MainSite" style="display: block;">
-      <div class="fullscreen-video">
-        <video id="myVideo" autoplay loop muted>
-          <source src="video.mp4" type="video/mp4">
-        </video>
-        <div class="content">
-          <h1 class="animated-text">Ron Metzger</h1>
-        </div>
-        <div class="scroll-down-arrows">
-          <div class="arrow arrow-1"></div>
-          <div class="arrow arrow-2"></div>
-          <div class="arrow arrow-3"></div>
+
+
+  <div id="MainSite" style="display: block;">
+    <div class="fullscreen-video">
+      <video id="myVideo" autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <h1 class="animated-text">Ron Metzger</h1>
+      </div>
+      <div class="scroll-down-arrows">
+        <div class="arrow arrow-1"></div>
+        <div class="arrow arrow-2"></div>
+        <div class="arrow arrow-3"></div>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="#aboutMe">About Me</a></li>
+        <li><a href="#projects">Projekte</a></li>
+        <li><a href="#impressum">Impressum</a></li>
+      </ul>
+    </nav>
+
+    <div id="aboutMe topline" class="section">
+
+      <div id="timeline">
+        <div class="line">
+          <div class="circle">
+            <h2 style="display: none;" class="StepsLebenslauf">Bachelor<br>Medienkonzeption</h2>
+            <p class="StepsLebenslaufText" style="display: none;">Medienkonzeption <br> 3D
+              Modeling<br>Animation<br>VFX<br>Interaktionsdesign</p>
+          </div>
+          <div class="circle" id="circle2"></div>
+          <div class="circle" id="circle3"></div>
+          <div class="circle" id="circle4"></div>
         </div>
       </div>
 
-      <nav class="menu">
-        <ul>
-          <li><a href="#aboutMe">About Me</a></li>
-          <li><a href="#projects">Projekte</a></li>
-          <li><a href="#impressum">Impressum</a></li>
-        </ul>
-      </nav>
-
-      <div id="aboutMe topline" class="section">
-
-        <div id="timeline">
-          <div class="line">
-            <div class="circle">
-              <h2 style="display: none;" class="StepsLebenslauf">Bachelor<br>Medienkonzeption</h2>
-              <p class="StepsLebenslaufText" style="display: none;">Medienkonzeption <br> 3D
-                Modeling<br>Animation<br>VFX<br>Interaktionsdesign</p>
-            </div>
-            <div class="circle" id="circle2"></div>
-            <div class="circle" id="circle3"></div>
-            <div class="circle" id="circle4"></div>
-          </div>
-        </div>
 
 
+    </div>
 
+    <div id="projects" class="section topline" style="padding-top: 10em; padding-bottom: 5em;">
+      <h2 style="margin-bottom: 1em;">Meine Projekte</h2>
+      <div class="filter-buttons">
+        <button class="filter-button" data-category="Alle">Alle</button>
+        <button class="filter-button" data-category="xr">XR</button>
+        <button class="filter-button" data-category="microcontroller">Microcontroller</button>
+        <button class="filter-button" data-category="video">Video</button>
+        <button class="filter-button" data-category="sonstige">Sonstige</button>
       </div>
 
-      <div id="projects" class="section topline" style="padding-top: 10em; padding-bottom: 5em;">
-        <h2 style="margin-bottom: 1em;">Meine Projekte</h2>
-        <div class="filter-buttons">
-          <button class="filter-button" data-category="Alle">Alle</button>
-          <button class="filter-button" data-category="xr">XR</button>
-          <button class="filter-button" data-category="microcontroller">Microcontroller</button>
-          <button class="filter-button" data-category="video">Video</button>
-          <button class="filter-button" data-category="sonstige">Sonstige</button>
-        </div>
 
 
 
-
-        <div class="projects">
-          <div class="SingleProject xr" onclick="toggleProjectDetails('MainSite','3DPrint')">
-            <div class="imgBox"><img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" class="imges"></div>
-            <div class="TextBox">
-              <h2 class="Title">3D Drucker Support App</h2>
-              <p class="paragraph">Diese App hab ich mal gemacht du kleiner lutscher. Das reicht für das Testen des Formats</p>
-            </div>
-          </div>
-
-          <div class="SingleProject video" onclick="toggleProjectDetails(this)">
-            <div class="imgBox"><img src="preview.jpg" class="imges"></div>
-            <div class="TextBox">
-              <h2 class="Title">video</h2>
-              <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
-            </div>
-          </div>
-          <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
-            <div class="imgBox"><img src="preview.jpg" class="imges"></div>
-            <div class="TextBox">
-              <h2 class="Title">Mikro</h2>
-              <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
-            </div>
-          </div>
-          <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
-            <div class="imgBox"><img src="preview.jpg" class="imges"></div>
-            <div class="TextBox">
-              <h2 class="Title">Mikro</h2>
-              <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
-            </div>
+      <div class="projects">
+        <div class="SingleProject xr" onclick="toggleProjectDetails('MainSite','3DPrint')">
+          <div class="imgBox"><img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg"
+              class="imges"></div>
+          <div class="TextBox">
+            <h2 class="Title">3D Drucker Support App</h2>
+            <p class="paragraph">Diese App hab ich mal gemacht du kleiner lutscher. Das reicht für das Testen des
+              Formats</p>
           </div>
         </div>
 
+        <div class="SingleProject video" onclick="toggleProjectDetails('MainSite', 'CoffeeBox')">
+          <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+          <div class="TextBox">
+            <h2 class="Title">CoffeeBox</h2>
+            <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+          </div>
+        </div>
+        <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
+          <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+          <div class="TextBox">
+            <h2 class="Title">Mikro</h2>
+            <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+          </div>
+        </div>
+        <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
+          <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+          <div class="TextBox">
+            <h2 class="Title">Mikro</h2>
+            <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+          </div>
+        </div>
+      </div>
 
 
-        <!-- <div class="project-list">
+
+      <!-- <div class="project-list">
     
     
     
@@ -156,62 +158,156 @@
       </div>
     </div>-->
 
-      </div>
-      <div id="impressum" class="section topline">
-        <h2>Impressum</h2>
-        <p>Impressum Text</p>
-      </div>
     </div>
-
-
-
-    <div id="projects-container" style="display: none;">
-      <div id="backButton" onclick="toggleProjectDetails('3DPrint','MainSite')"><</div>
-       <div id="3DPrint" style="display: none; margin-bottom: 5em;">
- 
-      <h3 class="ProjectTitle">3D Print Helper App</h3>
-      <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den Demonstrator hinaus gingen.</p>
-      <h4 class="ProjectSubTitle">Schnellüberblick</h4>
-      <ul>
-        <li>Unity</li>
-        <li>Vuforia für AR Objekterkennung für Android</li>
-        <li>Agora für Voice- und Videochat</li>
-        <li>Mirror für Multiplayer</li>
-        <li>Einzelprojekt</li>
-        <li>Projektdauer: 3 Wochen</li>
-      </ul>
-  
-      <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
-      <p class="ProjektDescriptionText">Bei technischen Problemen gibt es nur wenige Möglichkeiten, wie man von einem Unternehmen Hilfe erhalten kann: Oftmals sind es entweder einfache Webseiten, die Lösungen auflisten, oder man schreibt über einen Chat, welcher manchmal sogar von weniger nützlichen Bots beantwortet werden. Der letzte Funkte Hoffnung liegt dann bei einem Telefonsupport. Doch hier kann es durchaus schwer sein die nötigen Problematiken gut sprachlich darzustellen oder visuelles entsprechend zu beschreiben. Für den Support Mensch ist es dann wie das suchen der Nadel im Heuhaufen. Das Konzept der 3D Print Helper App ist demnach, dieses Serviceproblem zu lösen. Dies soll mit AR gelöst werden, wodurch der Supporter nicht nur ein Kamerafeed erhält, sondern der Nutzer die richtigen Komponenten gehighlightet bekommt. Somit könnte eine Unterhaltung mit der App wie folgt aussehen:</p>
-      <ul>
-        <li>Nutzer: Guten Tag, ich habe ein Problem. Mein Druck sieht immer schrecklich aus, aber ich weiß nicht warum.</li>
-        <li>Support: Alles klar, wird etwas auf Ihrem Monitor dargestellt?</li>
-        <li>Nutzer: Da steht, dass der Extruder verstopft ist. Aber was ist der Extruder?</li>
-        <li>Support: Einen Moment. Auf Ihrem Smartphone wird nun sichtbar, was Sie öffnen müssen und was der Extruder ist. Sehen Sie es?</li>
-        <li>Nutzer: Ah ja, vielen Dank. Ich schraube das kurz auf.</li>
-      </ul>  
-      <p class="ProjektDescriptionText">Der klare Vorteil hiervon ist, dass so auch ein besseres Supporterlebnis umgesetzt werden kann, ohne teure Kosten, die bei einer Fahrt zum Kunden anfallen würden. Zudem braucht der Nutzer nur ein Smartphone oder Tablet. Teure Geräte wie die Hololens sind so theoretisch nicht nötig, auch wenn eine Adaption für die Hololens natürlich beide Hände frei hält.</p>
-      <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
-      <p class="ProjektDescriptionText">Diese Anwendung wurde nur für Android in Unity 2021.3.27f1 entwickelt. Prinzipiell ist die App auch für IOS sowie Hololens umsetzbar. Für die Objekterkennung wurde Vuforia genutzt. Vuforia ist eine Package für Unity, mit dem auch die Objekterkennung für Android möglich ist. Hierfür muss ein möglichst exakter digitaler Zwilling vorliegen. Ein digitaler Zwilling des 3D Druckers war aus einem Studentenprojekt vorhanden, weshalb dies nicht extra erstellt werden musste.<br><br>
-        Zunächst wurde mithilfe von Vuforia ein Model Target entwickelt, welcher dann in Unity importiert wurde. Anschließend wurden das 3D Model des 3D Druckers importiert und erhielt entsprechende Materialien. Auch wurden die nötigen Komponenten des 3D Druckers, welche für den Demonstrator auswählbar gemacht werden sollten, definiert. <br><br>
-        Um den Sound- und Videofeed vom Nutzer zum Support zu übertragen, wurde Agora genutzt. Agora ist ein Service, der für Video- und Sprachchat für Videospiele einfach ermöglicht. Die Funktion von Agoras Videochat-Funktion wurde dann so umgearbeitet, dass nicht ein Kamerafeed, sondern die Bildschirminhalte des Nutzers gestreamt werden konnte. Dadurch kann der Support auch die AR Überlagungen im gestreamten Feed sehen.<br><br>
-        Um nun Eingaben vom UI des Supports zum Nutzer zu senden, damit z. B. bestimmte Teile des 3D Druckers animieren oder leuchten, muss noch eine Verbindung vorhanden sein, um Variablen auszutauschen. Hierfür wurde Mirror für Unity genutzt. So werden P2P Verbindungen aufgebaut, womit die übers UI des Supports eingegebenen Informationen an den Nutzer gesendet werden, wodurch z. B. Animationen gestartet oder Materialien gewechselt werden. Die Verbindung zwischen dem Nutzer und Support passiert automatisch, wenn sich diese im gleichen Netzwerk befinden. Ansonsten ist die Eingabe der IP notwendig.</p>
-        <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
-        <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den Demonstrator hinaus gingen.</p>
-    <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
-    <p class="ProjektDescriptionText">Der Prototyp nutzt zwei Systeme, die bei größerem Nutzen auf alle Fälle kostenpflichtig wären (Agora und Vuforia). Die Verbindung durch Mirror benötigt leider die Eingabe einer IP, da kein Matchmaking hierfür erstellt wurde. Die IP Adresse wird jedoch immer beim Nutzer auf dem Bildschirm dargestellt, sodass der Support, sobald er sich mit dem Videofeed verbunden hat, selber ablesen kann. Auch kann immer nur eine Connection gleichzeitig bestehen, also nur ein Nutzer mit einem Supporter. Mehrere Connections wurden im Zuge dessen, weil es sich um einen Demonstrator handelt, nicht umgesetzt. Diese Einschränkungen sind jedoch mit deutlich mehr Zeitaufwand alle möglich aufzuheben.</p>
-    <div class="container">
-      <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
-      <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
-      <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
-      <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
-      <!-- Weitere Bilder hier einfügen -->
+    <div id="impressum" class="section topline">
+      <h2>Impressum</h2>
+      <p>Impressum Text</p>
     </div>
-    
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" 
-    frameborder="0" allow="accelerometer; autoplay; 
-    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
+
+
+
+  <div id="projects-container" style="display: none;">
+    <div id="backButton">
+      <</div>
+        <div id="3DPrint" style="display: none; margin-bottom: 5em;">
+
+          <h3 class="ProjectTitle">3D Print Helper App</h3>
+          <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit
+            Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der
+            Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem
+            PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine
+            Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den
+            Demonstrator hinaus gingen.</p>
+          <h4 class="ProjectSubTitle">Schnellüberblick</h4>
+          <ul>
+            <li>Unity</li>
+            <li>Vuforia für AR Objekterkennung für Android</li>
+            <li>Agora für Voice- und Videochat</li>
+            <li>Mirror für Multiplayer</li>
+            <li>Einzelprojekt</li>
+            <li>Projektdauer: 3 Wochen</li>
+          </ul>
+
+          <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
+          <p class="ProjektDescriptionText">Bei technischen Problemen gibt es nur wenige Möglichkeiten, wie man von
+            einem Unternehmen Hilfe erhalten kann: Oftmals sind es entweder einfache Webseiten, die Lösungen auflisten,
+            oder man schreibt über einen Chat, welcher manchmal sogar von weniger nützlichen Bots beantwortet werden.
+            Der letzte Funkte Hoffnung liegt dann bei einem Telefonsupport. Doch hier kann es durchaus schwer sein die
+            nötigen Problematiken gut sprachlich darzustellen oder visuelles entsprechend zu beschreiben. Für den
+            Support Mensch ist es dann wie das suchen der Nadel im Heuhaufen. Das Konzept der 3D Print Helper App ist
+            demnach, dieses Serviceproblem zu lösen. Dies soll mit AR gelöst werden, wodurch der Supporter nicht nur ein
+            Kamerafeed erhält, sondern der Nutzer die richtigen Komponenten gehighlightet bekommt. Somit könnte eine
+            Unterhaltung mit der App wie folgt aussehen:</p>
+          <ul>
+            <li>Nutzer: Guten Tag, ich habe ein Problem. Mein Druck sieht immer schrecklich aus, aber ich weiß nicht
+              warum.</li>
+            <li>Support: Alles klar, wird etwas auf Ihrem Monitor dargestellt?</li>
+            <li>Nutzer: Da steht, dass der Extruder verstopft ist. Aber was ist der Extruder?</li>
+            <li>Support: Einen Moment. Auf Ihrem Smartphone wird nun sichtbar, was Sie öffnen müssen und was der
+              Extruder ist. Sehen Sie es?</li>
+            <li>Nutzer: Ah ja, vielen Dank. Ich schraube das kurz auf.</li>
+          </ul>
+          <p class="ProjektDescriptionText">Der klare Vorteil hiervon ist, dass so auch ein besseres Supporterlebnis
+            umgesetzt werden kann, ohne teure Kosten, die bei einer Fahrt zum Kunden anfallen würden. Zudem braucht der
+            Nutzer nur ein Smartphone oder Tablet. Teure Geräte wie die Hololens sind so theoretisch nicht nötig, auch
+            wenn eine Adaption für die Hololens natürlich beide Hände frei hält.</p>
+          <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
+          <p class="ProjektDescriptionText">Diese Anwendung wurde nur für Android in Unity 2021.3.27f1 entwickelt.
+            Prinzipiell ist die App auch für IOS sowie Hololens umsetzbar. Für die Objekterkennung wurde Vuforia
+            genutzt. Vuforia ist eine Package für Unity, mit dem auch die Objekterkennung für Android möglich ist.
+            Hierfür muss ein möglichst exakter digitaler Zwilling vorliegen. Ein digitaler Zwilling des 3D Druckers war
+            aus einem Studentenprojekt vorhanden, weshalb dies nicht extra erstellt werden musste.<br><br>
+            Zunächst wurde mithilfe von Vuforia ein Model Target entwickelt, welcher dann in Unity importiert wurde.
+            Anschließend wurden das 3D Model des 3D Druckers importiert und erhielt entsprechende Materialien. Auch
+            wurden die nötigen Komponenten des 3D Druckers, welche für den Demonstrator auswählbar gemacht werden
+            sollten, definiert. <br><br>
+            Um den Sound- und Videofeed vom Nutzer zum Support zu übertragen, wurde Agora genutzt. Agora ist ein
+            Service, der für Video- und Sprachchat für Videospiele einfach ermöglicht. Die Funktion von Agoras
+            Videochat-Funktion wurde dann so umgearbeitet, dass nicht ein Kamerafeed, sondern die Bildschirminhalte des
+            Nutzers gestreamt werden konnte. Dadurch kann der Support auch die AR Überlagungen im gestreamten Feed
+            sehen.<br><br>
+            Um nun Eingaben vom UI des Supports zum Nutzer zu senden, damit z. B. bestimmte Teile des 3D Druckers
+            animieren oder leuchten, muss noch eine Verbindung vorhanden sein, um Variablen auszutauschen. Hierfür wurde
+            Mirror für Unity genutzt. So werden P2P Verbindungen aufgebaut, womit die übers UI des Supports eingegebenen
+            Informationen an den Nutzer gesendet werden, wodurch z. B. Animationen gestartet oder Materialien gewechselt
+            werden. Die Verbindung zwischen dem Nutzer und Support passiert automatisch, wenn sich diese im gleichen
+            Netzwerk befinden. Ansonsten ist die Eingabe der IP notwendig.</p>
+          <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
+          <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit
+            Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der
+            Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem
+            PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine
+            Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den
+            Demonstrator hinaus gingen.</p>
+          <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
+          <p class="ProjektDescriptionText">Der Prototyp nutzt zwei Systeme, die bei größerem Nutzen auf alle Fälle
+            kostenpflichtig wären (Agora und Vuforia). Die Verbindung durch Mirror benötigt leider die Eingabe einer IP,
+            da kein Matchmaking hierfür erstellt wurde. Die IP Adresse wird jedoch immer beim Nutzer auf dem Bildschirm
+            dargestellt, sodass der Support, sobald er sich mit dem Videofeed verbunden hat, selber ablesen kann. Auch
+            kann immer nur eine Connection gleichzeitig bestehen, also nur ein Nutzer mit einem Supporter. Mehrere
+            Connections wurden im Zuge dessen, weil es sich um einen Demonstrator handelt, nicht umgesetzt. Diese
+            Einschränkungen sind jedoch mit deutlich mehr Zeitaufwand alle möglich aufzuheben.</p>
+          <div class="container">
+            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
+            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
+            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
+            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
+            <!-- Weitere Bilder hier einfügen -->
+          </div>
+
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0"
+            allow="accelerometer; autoplay; 
+    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="CoffeeBox" style="display: none; margin-bottom: 5em;">
+
+          <h3 class="ProjectTitle">CoffeeBox</h3>
+          <p class="ProjektDescriptionText">Dieser Demonstrator ist der einzige Demonstrator, den ich an beruflich an der Hochschule Furtwangen mit einem Microcontroller erstellt habe. </p>
+          <p class="ProjektDescriptionText">Mit der NFC Karte der Hochschule kann Kaffee gebucht werden, worraufhin die Kaffeemühle aktiviert wird, wenn genug Credits vorhanden sind. Die Datenbank für die Credits befinden sich lokal auf einer SD Karte sowie, als Backup, in einer Google Sheet.
+            Die Credits können zudem über einen Telegram-Bot ausgelesen und erhöht oder niedriger gesetz werden. Auch für Veranstaltungen sie kleine Funktionen wie der "FreeCoffee" Modus implementiert. 
+          </p>
+        
+          <h4 class="ProjectSubTitle">Schnellüberblick</h4>
+          <ul>
+            <li>ESP32 Dev-Module</li>
+            <li>SD Karte und Reader</li>
+            <li>NFC Lesegerät</li>
+            <li>Google Sheets</li>
+            <li>Telegram-Bot</li>
+            <li>Gruppenprojekt</li>
+          </ul>
+
+          <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
+          <p class="ProjektDescriptionText">Jeder, der Kaffee mag, kennt es im eigenen Unternehmen: Immer wieder Stress, weil die Kaffeetasse zu leer ist.
+            Aber jetzt nicht mehr! Nun heißt es, entweder den gemühlten Kaffee bereits mitbringen oder nur welchen erhalten, wenns genug Coins gibt! Damit ist, bis auf das Problem mit der Milch, das ganze zumindest ein klein wenig simpler. 
+          </p>
+          <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
+          <p class="ProjektDescriptionText">
+            Für den Demonstrator wurde ein ESP32, einfach nur wegen seinem enthaltenem Wifi-Chip, genutzt. Das Verbinden des NFC Readers und SD Readers benötigte immerhin SPI um zu funktionieren. <br>
+            Zudem wurde ein OLED Bildschirm für die Visualisierungen genutzt. Einträge in Google Sheets funktionieren über Google Scripts. Der ESP öffnet praktisch einen Link, in dem alle Informationen drin sind. Das Google Script teilt diese Informationen dann auf und platziert sie in die jeweiligen Spalten.<br>
+            Bei jeder Buchung erhält der Kaffee-Chef immer eine Benachrichtigung über Telegram mit der anonymen Karten-ID. Diese ID kann dann über Kommandos aufgeladen werden. 
+          </p>
+          <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
+          <p class="ProjektDescriptionText">Das Zusammenarbeiten verschiedener Elektroteile, mit denen ich davor noch nicht gearbeitet habe. Das rumspielen mit einem Telegram-Bot und Google Sheets war auf jeden Fall aber mein Highlight, welche in Versuchen werde, in weitere Projekte einzubinden.</p>
+          <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
+          <p class="ProjektDescriptionText">
+            Den Prototypen habe ich nach dem implementieren aller Funktionen, aufgrund von Urlaub, abgegeben. 
+            Nach der weitergabe wurde noch eine Box konstruiert, 3D gedruckt und die gelötetete Elektronik und verkabelung darin versteckt.
+            Der Prototyp befindet sich aktuell noch in der aktiven Testphase im Erlebnisraum Furtwangen.
+          </p>
+          <div class="container">
+            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
+            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
+            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
+            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
+            <!-- Weitere Bilder hier einfügen -->
+          </div>
+
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0"
+            allow="accelerometer; autoplay; 
+    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
 
     <script src="script.js"></script>
