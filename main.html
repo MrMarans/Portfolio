@@ -87,14 +87,14 @@
             <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
           </div>
         </div>
-        <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
+        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'IAOPodcast')">
           <div class="imgBox"><img src="preview.jpg" class="imges"></div>
           <div class="TextBox">
-            <h2 class="Title">Mikro</h2>
-            <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
+            <h2 class="Title">Podcast</h2>
+            <p class="paragraph">Produktion eines Podcast für das Projekt "Kompetenzzentrum Smart Services"</p>
           </div>
         </div>
-        <div class="SingleProject microcontroller" onclick="toggleProjectDetails(this)">
+        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'Vishoelisation')"> 
           <div class="imgBox"><img src="preview.jpg" class="imges"></div>
           <div class="TextBox">
             <h2 class="Title">Mikro</h2>
@@ -169,7 +169,8 @@
 
   <div id="projects-container" style="display: none;">
     <div id="backButton">
-      <</div>
+      < </div>
+        <!--------------------------------------------------->
         <div id="3DPrint" style="display: none; margin-bottom: 5em;">
 
           <h3 class="ProjectTitle">3D Print Helper App</h3>
@@ -260,14 +261,20 @@
             allow="accelerometer; autoplay; 
     encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+
+        <!--------------------------------------------------->
         <div id="CoffeeBox" style="display: none; margin-bottom: 5em;">
 
           <h3 class="ProjectTitle">CoffeeBox</h3>
-          <p class="ProjektDescriptionText">Dieser Demonstrator ist der einzige Demonstrator, den ich an beruflich an der Hochschule Furtwangen mit einem Microcontroller erstellt habe. </p>
-          <p class="ProjektDescriptionText">Mit der NFC Karte der Hochschule kann Kaffee gebucht werden, worraufhin die Kaffeemühle aktiviert wird, wenn genug Credits vorhanden sind. Die Datenbank für die Credits befinden sich lokal auf einer SD Karte sowie, als Backup, in einer Google Sheet.
-            Die Credits können zudem über einen Telegram-Bot ausgelesen und erhöht oder niedriger gesetz werden. Auch für Veranstaltungen sie kleine Funktionen wie der "FreeCoffee" Modus implementiert. 
+          <p class="ProjektDescriptionText">Dieser Demonstrator ist der einzige Demonstrator, den ich an beruflich an
+            der Hochschule Furtwangen mit einem Microcontroller erstellt habe. </p>
+          <p class="ProjektDescriptionText">Mit der NFC Karte der Hochschule kann Kaffee gebucht werden, worraufhin die
+            Kaffeemühle aktiviert wird, wenn genug Credits vorhanden sind. Die Datenbank für die Credits befinden sich
+            lokal auf einer SD Karte sowie, als Backup, in einer Google Sheet.
+            Die Credits können zudem über einen Telegram-Bot ausgelesen und erhöht oder niedriger gesetz werden. Auch
+            für Veranstaltungen sie kleine Funktionen wie der "FreeCoffee" Modus implementiert.
           </p>
-        
+
           <h4 class="ProjectSubTitle">Schnellüberblick</h4>
           <ul>
             <li>ESP32 Dev-Module</li>
@@ -279,21 +286,31 @@
           </ul>
 
           <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
-          <p class="ProjektDescriptionText">Jeder, der Kaffee mag, kennt es im eigenen Unternehmen: Immer wieder Stress, weil die Kaffeetasse zu leer ist.
-            Aber jetzt nicht mehr! Nun heißt es, entweder den gemühlten Kaffee bereits mitbringen oder nur welchen erhalten, wenns genug Coins gibt! Damit ist, bis auf das Problem mit der Milch, das ganze zumindest ein klein wenig simpler. 
+          <p class="ProjektDescriptionText">Jeder, der Kaffee mag, kennt es im eigenen Unternehmen: Immer wieder Stress,
+            weil die Kaffeetasse zu leer ist.
+            Aber jetzt nicht mehr! Nun heißt es, entweder den gemühlten Kaffee bereits mitbringen oder nur welchen
+            erhalten, wenns genug Coins gibt! Damit ist, bis auf das Problem mit der Milch, das ganze zumindest ein
+            klein wenig simpler.
           </p>
           <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
           <p class="ProjektDescriptionText">
-            Für den Demonstrator wurde ein ESP32, einfach nur wegen seinem enthaltenem Wifi-Chip, genutzt. Das Verbinden des NFC Readers und SD Readers benötigte immerhin SPI um zu funktionieren. <br>
-            Zudem wurde ein OLED Bildschirm für die Visualisierungen genutzt. Einträge in Google Sheets funktionieren über Google Scripts. Der ESP öffnet praktisch einen Link, in dem alle Informationen drin sind. Das Google Script teilt diese Informationen dann auf und platziert sie in die jeweiligen Spalten.<br>
-            Bei jeder Buchung erhält der Kaffee-Chef immer eine Benachrichtigung über Telegram mit der anonymen Karten-ID. Diese ID kann dann über Kommandos aufgeladen werden. 
+            Für den Demonstrator wurde ein ESP32, einfach nur wegen seinem enthaltenem Wifi-Chip, genutzt. Das Verbinden
+            des NFC Readers und SD Readers benötigte immerhin SPI um zu funktionieren. <br>
+            Zudem wurde ein OLED Bildschirm für die Visualisierungen genutzt. Einträge in Google Sheets funktionieren
+            über Google Scripts. Der ESP öffnet praktisch einen Link, in dem alle Informationen drin sind. Das Google
+            Script teilt diese Informationen dann auf und platziert sie in die jeweiligen Spalten.<br>
+            Bei jeder Buchung erhält der Kaffee-Chef immer eine Benachrichtigung über Telegram mit der anonymen
+            Karten-ID. Diese ID kann dann über Kommandos aufgeladen werden.
           </p>
           <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
-          <p class="ProjektDescriptionText">Das Zusammenarbeiten verschiedener Elektroteile, mit denen ich davor noch nicht gearbeitet habe. Das rumspielen mit einem Telegram-Bot und Google Sheets war auf jeden Fall aber mein Highlight, welche in Versuchen werde, in weitere Projekte einzubinden.</p>
+          <p class="ProjektDescriptionText">Das Zusammenarbeiten verschiedener Elektroteile, mit denen ich davor noch
+            nicht gearbeitet habe. Das rumspielen mit einem Telegram-Bot und Google Sheets war auf jeden Fall aber mein
+            Highlight, welche in Versuchen werde, in weitere Projekte einzubinden.</p>
           <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
           <p class="ProjektDescriptionText">
-            Den Prototypen habe ich nach dem implementieren aller Funktionen, aufgrund von Urlaub, abgegeben. 
-            Nach der weitergabe wurde noch eine Box konstruiert, 3D gedruckt und die gelötetete Elektronik und verkabelung darin versteckt.
+            Den Prototypen habe ich nach dem implementieren aller Funktionen, aufgrund von Urlaub, abgegeben.
+            Nach der weitergabe wurde noch eine Box konstruiert, 3D gedruckt und die gelötetete Elektronik und
+            verkabelung darin versteckt.
             Der Prototyp befindet sich aktuell noch in der aktiven Testphase im Erlebnisraum Furtwangen.
           </p>
           <div class="container">
@@ -303,14 +320,114 @@
             <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
             <!-- Weitere Bilder hier einfügen -->
           </div>
-
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0"
             allow="accelerometer; autoplay; 
     encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+
+        <!--------------------------------------------------->
+        <div id="IAOPodcast" style="display: none; margin-bottom: 5em;">
+
+          <h3 class="ProjectTitle">Podcast</h3>
+          <p class="ProjektDescriptionText">Diese Videopodcastreihe habe ich für das Projekt "Kompetenzzentrum Smart
+            Service" gemacht. Hierfür sind 6 Folgen geplant/in der Produktion. </p>
+
+          <h4 class="ProjectSubTitle">Schnellüberblick</h4>
+          <ul>
+            <li>Alles in der ganzen Produktion (außer Drohnenaufnahmen)</li>
+            <li>Premiere Pro, After Effects</li>
+            <li>Davinci Resolve</li>
+            <li>Sony a6500, Nikon 5DM4</li>
+          </ul>
+
+          <h4 class="ProjectSubTitle">Auftrag</h4>
+          <p class="ProjektDescriptionText">Für die Podcastsreihe zeigen verschiedene Institute und öffentliche
+            Einheiten, wie ein intelligenter Service schon heute im Mittelstand aussehen kann.</p>
+
+          <ul>
+            <li>Folge 1: Die Pieper im Einzelhandel (Name nicht final)</li>
+            <li>Was zur Hölle ist Servitisation?</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+          </ul>
+
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0"
+            allow="accelerometer; autoplay; 
+  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
-    <script src="script.js"></script>
+    <!--------------------------------------------------->
+    <div id="Vishoelisation" style="display: none; margin-bottom: 5em;">
+
+      <h3 class="ProjectTitle">CoffeeBox</h3>
+      <p class="ProjektDescriptionText">Dieser Demonstrator ist der einzige Demonstrator, den ich an beruflich an der
+        Hochschule Furtwangen mit einem Microcontroller erstellt habe. </p>
+      <p class="ProjektDescriptionText">Mit der NFC Karte der Hochschule kann Kaffee gebucht werden, worraufhin die
+        Kaffeemühle aktiviert wird, wenn genug Credits vorhanden sind. Die Datenbank für die Credits befinden sich lokal
+        auf einer SD Karte sowie, als Backup, in einer Google Sheet.
+        Die Credits können zudem über einen Telegram-Bot ausgelesen und erhöht oder niedriger gesetz werden. Auch für
+        Veranstaltungen sie kleine Funktionen wie der "FreeCoffee" Modus implementiert.
+      </p>
+
+      <h4 class="ProjectSubTitle">Schnellüberblick</h4>
+      <ul>
+        <li>ESP32 Dev-Module</li>
+        <li>SD Karte und Reader</li>
+        <li>NFC Lesegerät</li>
+        <li>Google Sheets</li>
+        <li>Telegram-Bot</li>
+        <li>Gruppenprojekt</li>
+      </ul>
+
+      <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
+      <p class="ProjektDescriptionText">Jeder, der Kaffee mag, kennt es im eigenen Unternehmen: Immer wieder Stress,
+        weil die Kaffeetasse zu leer ist.
+        Aber jetzt nicht mehr! Nun heißt es, entweder den gemühlten Kaffee bereits mitbringen oder nur welchen erhalten,
+        wenns genug Coins gibt! Damit ist, bis auf das Problem mit der Milch, das ganze zumindest ein klein wenig
+        simpler.
+      </p>
+      <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
+      <p class="ProjektDescriptionText">
+        Für den Demonstrator wurde ein ESP32, einfach nur wegen seinem enthaltenem Wifi-Chip, genutzt. Das Verbinden des
+        NFC Readers und SD Readers benötigte immerhin SPI um zu funktionieren. <br>
+        Zudem wurde ein OLED Bildschirm für die Visualisierungen genutzt. Einträge in Google Sheets funktionieren über
+        Google Scripts. Der ESP öffnet praktisch einen Link, in dem alle Informationen drin sind. Das Google Script
+        teilt diese Informationen dann auf und platziert sie in die jeweiligen Spalten.<br>
+        Bei jeder Buchung erhält der Kaffee-Chef immer eine Benachrichtigung über Telegram mit der anonymen Karten-ID.
+        Diese ID kann dann über Kommandos aufgeladen werden.
+      </p>
+      <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
+      <p class="ProjektDescriptionText">Das Zusammenarbeiten verschiedener Elektroteile, mit denen ich davor noch nicht
+        gearbeitet habe. Das rumspielen mit einem Telegram-Bot und Google Sheets war auf jeden Fall aber mein Highlight,
+        welche in Versuchen werde, in weitere Projekte einzubinden.</p>
+      <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
+      <p class="ProjektDescriptionText">
+        Den Prototypen habe ich nach dem implementieren aller Funktionen, aufgrund von Urlaub, abgegeben.
+        Nach der weitergabe wurde noch eine Box konstruiert, 3D gedruckt und die gelötetete Elektronik und verkabelung
+        darin versteckt.
+        Der Prototyp befindet sich aktuell noch in der aktiven Testphase im Erlebnisraum Furtwangen.
+      </p>
+      <div class="container">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
+        <!-- Weitere Bilder hier einfügen -->
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+<!--------------------------------------------------->
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
