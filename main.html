@@ -94,17 +94,35 @@
             <p class="paragraph">Produktion eines Podcast für das Projekt "Kompetenzzentrum Smart Services"</p>
           </div>
         </div>
-        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'Vishoelisation')"> 
+        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'Sport-Tracker')">
           <div class="imgBox"><img src="preview.jpg" class="imges"></div>
           <div class="TextBox">
-            <h2 class="Title">Mikro</h2>
+            <h2 class="Title">Sport-Tracker</h2>
             <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
           </div>
         </div>
+        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'Vishoelisation')">
+          <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+          <div class="TextBox">
+            <h2 class="Title">Vishoelisation</h2>
+            <p class="paragraph">Darstellung von Produktvariationen über AR Produkterkennung</p>
+          </div>
+        </div>
+        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'VR-Schnorcheln')">
+          <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+          <div class="TextBox">
+            <h2 class="Title">Abenteuer mit Galaxino!</h2>
+            <p class="paragraph">Weltneuheit: VR-Schnorchel-Spiel mit Positions-Tracking!<br> "Besser als Europapark" - Ron Metzger</p>
+          </div>
+        </div>
+        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'BH-WebApp')">
+          <div class="imgBox"><img src="preview.jpg" class="imges"></div>
+          <div class="TextBox">
+            <h2 class="Title">Meys BH-Smartmirror Webanwendung</h2>
+            <p class="paragraph">Die kleine Hilfe für das BH-Größe ausmessen</p>
+          </div>
+        </div>
       </div>
-
-
-
       <!-- <div class="project-list">
     
     
@@ -170,6 +188,14 @@
   <div id="projects-container" style="display: none;">
     <div id="backButton">
       < </div>
+        <!--
+        3D Print
+        Coffeebox
+        Podcasts
+        SportGerät
+        Vishoelisation
+        Galaxino VR Schnorcheln
+        ---->
         <!--------------------------------------------------->
         <div id="3DPrint" style="display: none; margin-bottom: 5em;">
 
@@ -356,62 +382,56 @@
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0"
             allow="accelerometer; autoplay; 
   encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        
 
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <!--------------------------------------------------->
-    <div id="Vishoelisation" style="display: none; margin-bottom: 5em;">
+    <div id="Sport-Tracker" style="display: none; margin-bottom: 5em;">
 
-      <h3 class="ProjectTitle">CoffeeBox</h3>
-      <p class="ProjektDescriptionText">Dieser Demonstrator ist der einzige Demonstrator, den ich an beruflich an der
-        Hochschule Furtwangen mit einem Microcontroller erstellt habe. </p>
-      <p class="ProjektDescriptionText">Mit der NFC Karte der Hochschule kann Kaffee gebucht werden, worraufhin die
-        Kaffeemühle aktiviert wird, wenn genug Credits vorhanden sind. Die Datenbank für die Credits befinden sich lokal
-        auf einer SD Karte sowie, als Backup, in einer Google Sheet.
-        Die Credits können zudem über einen Telegram-Bot ausgelesen und erhöht oder niedriger gesetz werden. Auch für
-        Veranstaltungen sie kleine Funktionen wie der "FreeCoffee" Modus implementiert.
+      <h3 class="ProjectTitle">Sport-Tracker</h3>
+      <p class="ProjektDescriptionText">Dies ist ein privates Projekt für einen Nachbarn. Ein Webserver stellt eine
+        Wasserwaage dar und tracked Erfolge. Das Projekt ist <a
+          href="https://github.com/MrMarans/ESP32-Sensor--Sport-Projekt">hier</a> runtergeladen werden. </p>
+
+      <p class="ProjektDescriptionText">Ein ESP32 hat einen IMU Sensor angeschlossen. Dessen Rotationsbewegungen werden
+        auf einer Webseite live dargestellt. Zudem gibt es eine Timer-Funktion und eine Bewegungshistorie.
       </p>
 
       <h4 class="ProjectSubTitle">Schnellüberblick</h4>
       <ul>
         <li>ESP32 Dev-Module</li>
-        <li>SD Karte und Reader</li>
-        <li>NFC Lesegerät</li>
-        <li>Google Sheets</li>
-        <li>Telegram-Bot</li>
-        <li>Gruppenprojekt</li>
+        <li>Websockets</li>
+        <li>Webserver</li>
+        <li>HTML, CSS, JS</li>
       </ul>
 
       <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
-      <p class="ProjektDescriptionText">Jeder, der Kaffee mag, kennt es im eigenen Unternehmen: Immer wieder Stress,
-        weil die Kaffeetasse zu leer ist.
-        Aber jetzt nicht mehr! Nun heißt es, entweder den gemühlten Kaffee bereits mitbringen oder nur welchen erhalten,
-        wenns genug Coins gibt! Damit ist, bis auf das Problem mit der Milch, das ganze zumindest ein klein wenig
-        simpler.
+      <p class="ProjektDescriptionText">Das Sportgerät des Nachbars ist eine Konstruktion, auf welcher man steht.
+        Während man breitbeinig auf einem Brett steht, welches nach Links und Rechts umkippen kann, muss man versuchen,
+        gerade wie möglich zu stehen.
+        Leider reicht beim Nutzen des Geräts das eigene Gewichtssinn nicht aus, um immer zu wissen, wo der Mittelpunkt
+        ist. Dafür hilft diese Anwendung und zeigt in der Historie nach jedem Training immer an, wie es so lief.
       </p>
       <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
       <p class="ProjektDescriptionText">
-        Für den Demonstrator wurde ein ESP32, einfach nur wegen seinem enthaltenem Wifi-Chip, genutzt. Das Verbinden des
-        NFC Readers und SD Readers benötigte immerhin SPI um zu funktionieren. <br>
-        Zudem wurde ein OLED Bildschirm für die Visualisierungen genutzt. Einträge in Google Sheets funktionieren über
-        Google Scripts. Der ESP öffnet praktisch einen Link, in dem alle Informationen drin sind. Das Google Script
-        teilt diese Informationen dann auf und platziert sie in die jeweiligen Spalten.<br>
-        Bei jeder Buchung erhält der Kaffee-Chef immer eine Benachrichtigung über Telegram mit der anonymen Karten-ID.
-        Diese ID kann dann über Kommandos aufgeladen werden.
+        Hier wurde der ESP32 genutzt wegen seinem eingebautem Wifi-Chip. Ich hatte zudem zu der Zeit noch keine 8266,
+        heute würde ich den nutzen.
+        Jedenfalls wird ein Webserver vom ESP gestartet, wenn man ihn einschält. Auf Wunsch verbindet sich dieser nicht
+        ans Wifi, sondern baut sein eigenes Netz auf. Nach nem Login kann man dann auf die Webseite, die über Websockets
+        live aktualisiert.
+
       </p>
       <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
-      <p class="ProjektDescriptionText">Das Zusammenarbeiten verschiedener Elektroteile, mit denen ich davor noch nicht
-        gearbeitet habe. Das rumspielen mit einem Telegram-Bot und Google Sheets war auf jeden Fall aber mein Highlight,
-        welche in Versuchen werde, in weitere Projekte einzubinden.</p>
+      <p class="ProjektDescriptionText">Hier habe ich mich zum ersten mal richtig mit Webservern auf ESP32 beschäftigt,
+        sowie mit Websockets. Daher war das nochmal bezüglich Typescript ganz interessant.</p>
       <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
       <p class="ProjektDescriptionText">
-        Den Prototypen habe ich nach dem implementieren aller Funktionen, aufgrund von Urlaub, abgegeben.
-        Nach der weitergabe wurde noch eine Box konstruiert, 3D gedruckt und die gelötetete Elektronik und verkabelung
-        darin versteckt.
-        Der Prototyp befindet sich aktuell noch in der aktiven Testphase im Erlebnisraum Furtwangen.
+        Leider muss man dem IMU Sensor immer wieder neu kalibrieren über die Webseite, weil das Rauschen bei meinem
+        einfach zu stark war, selbst nach DataFusion und Rauschfiltern. Einziges, was ich nicht probiert habe,
+        Ist das Rauschen individuell auf meinen genutzten Sensor zu kalibrieren.
       </p>
       <div class="container">
         <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
@@ -423,8 +443,145 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-<!--------------------------------------------------->
+    <!--------------------------------------------------->
 
+    <div id="Vishoelisation" style="display: none; margin-bottom: 5em;">
+
+      <h3 class="ProjectTitle">Vishoelisation</h3>
+      <p class="ProjektDescriptionText">Hier werden Schuhe erkannt und Variationen dieser dargestellt. Dieser Demonstrator in Zusammenarbeit mit Schuh-Kaufmann Heilbronn und dem Urban Innovation Hub Heilbronn entstanden. Im Urban Innovation Hub wird es zudem dauerhaft ausgestellt.</p>
+      <p class="ProjektDescriptionText">Diese Anwendung für Android ist speziell für den Einzelhandel und dem Problem, dass das Schuhangebot zu groß ist für die meisten Läden von Einzelhändlern.
+      </p>
+
+      <h4 class="ProjectSubTitle">Schnellüberblick</h4>
+      <ul>
+        <li>Unity</li>
+        <li>Vuforia</li>
+        <li>Einzelprojekt</li>
+        <li>Dauer: 1 Monate</li>
+      </ul>
+
+      <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
+      <p class="ProjektDescriptionText">Das Schuhangebot ist riesig. Und daher kann der normale Einzelhändler einfach nicht alle
+        Schuhe und dann noch Farbvariationen im Lagerhaben. Das gute bei Farbvariationen ist, dass die Passform noch immer die gleiche ist.
+        Daher kann der Kunde durch einen Verkäufer mit diese App zunächst einen Schuh in einer zufälligen Farbe anziehen und sich dann
+        die gewünschte Farbe nach Hause liefern lassen. Damit besitzt der lokale Einzelhandel zudem direkt den Vorteil, nicht nur einen Online-Vertrieb zu haben, sondern auch eine lokale Stelle mit dessen Vorteilen.
+      </p>
+      <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
+      <p class="ProjektDescriptionText">
+        Es war ein klein wenig Tricky herauszufinden, wie man verschiedene Objekte gleichzeitig in Vuforia erkennen lassen kann. 
+        Das ganze UI baut sich beim Start responsive auf durch verschiedenste Prefabs. Hier habe ich entsprechend zum ersten Mal
+        ein richtig gescheites Menü erstellt. Auch Animationen innerhalb des Menüs sind durch Code geased und alles super einfach anpassbar über den Inspector.
+      </p>
+      <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
+      <p class="ProjektDescriptionText">Bei diesem Demonstrator habe ich besonders auf guten Code geachtet sowie auf die Responsiveness des schönen Menüs, weil klar war, das diese Anwendung besonders oft gezeigt werden sowie von den Medien aufgegriffen werden wird.</p>
+      <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
+      <p class="ProjektDescriptionText">
+        Die App hat ein Kernproblem: Für die Erkennung der Schuhe wurden 3D Scans genutzt, die einfach zu groß sind, da keine Zeit war zur optimierung aller 3D Scan Meshes.
+        Daraus entstehen zwei Probleme: Auf vielen Geräten die älter sind als ungefähr 2021 stürzt die App einfach manchmal ab, weils einfach zu viel wird fürs Handy.
+        Zudem braucht die App etwa 17 Sekunden zum laden, weil die 3D Daten zum Start-Up direkt mitgeladen werden. Wenn optimierte 3D-Daten vorhanden wären, wären jedoch beide Probleme behoben. 
+      </p>
+      <div class="container">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
+        <!-- Weitere Bilder hier einfügen -->
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+    <!------------------------------------------------->
+
+    <div id="VR-Schnorcheln" style="display: none; margin-bottom: 5em;">
+
+      <h3 class="ProjectTitle">VR-Schnorcheln mit Galaxino!</h3>
+      <p class="ProjektDescriptionText">Schnorchel mit dieser VR-Anwendung im Badeparadies Titisee-Neustadt! Man trägt eine Schnorchelbrille, welches ein Smartphone dran hat. So schwimmt man virtuell im Ozean, physikalisch jedoch im Badeparadies. 
+
+      </p>
+      <p class="ProjektDescriptionText">
+        Die Anwendung wurde mithilfe der Firma Shuuna gemacht, welche die Technik des Trackings des Smartphones uns zur verfügung stellte. Ein Unity-Level mit Interaktionen für Cardboard-VR wurde fürs erkunden und erspielen erstellt worden.   
+      </p>
+
+      <h4 class="ProjectSubTitle">Schnellüberblick</h4>
+      <ul>
+        <li>Unity</li>
+        <li>Cardboard-VR-Like</li>
+        <li>Partnerprojekt</li>
+        <li>Dauer: 3 Monate</li>
+      </ul>
+
+      <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
+      <p class="ProjektDescriptionText">
+        Um für das Projekt "Kompetenzzentrum Smart Services" auch den Tourismus-Bereich abzugreifen, wurde Tourismus für ein kleines Bad geplant. Nachdem unser die Assetproduktion abgeschlossen war, wurde leider bekannt, dass das Schwimmbad für immer schließen musste.
+        Zu dieser Zeit war es hart um Schwimmbäder, da viele in Baden-Württemberg schließen mussten. Kinder hatten keine Möglichkeiten mehr schwimmen zu lernen.
+        <br> 
+        Daher kooperierten wir dann mit dem Badeparadies in Titisee-Neustadt und erstellten nun personalisierte Assets für ein Level. 
+        In diesem sucht man zusammen mit dem Maskotchen "Galaxino" das Korallenriff nach Münzen ab, bevor es Nacht ist. 
+      </p>
+      <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
+      <p class="ProjektDescriptionText">
+        Das Smartphone wird über drei "Muscheln" Sender getracked, die am Rand des Beckens sind. Die Rotation des Kopfs wird einfach über das Handy bestimmt.
+        Jedenfalls, da es keine Controller für die Anwendung gibt, kann man nur mit schauen und Kopf bewegen irgenwelche Interaktionen machen, weswegen wir uns auf Objekte Anstarren geeinigt haben.
+        Ansonsten wurde hier noch ein Toon-Look umgesetzt und das Spiel, aufgrund von VR fürs Handy, sehr stark optimiert, sodass es auf den genutzten Handy stets auf mind. 60FPS läuft.
+      </p>
+      <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
+      <p class="ProjektDescriptionText">Optimierung von 3D-Daten und Visuals für die Entwicklung fürs Smartphone.</p>
+      <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
+      <p class="ProjektDescriptionText">
+        Probleme gibt es bisher noch nicht. Es wird bald in die Testphase gehen, da eine Studie daraus entwickelt wird, wie immersiv VR und Wasser zusammen ist.   
+      </p>
+      <div class="container">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
+        <!-- Weitere Bilder hier einfügen -->
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div id="BH-WebApp" style="display: none; margin-bottom: 5em;">
+
+      <h3 class="ProjectTitle">Die Mey BH-WebApp</h3>
+      <p class="ProjektDescriptionText"> Die Webanwendung wurde in Zusammenarbeit mit Mey entwickelt. Mey lieferte uns die notwendige BH Grötentabellenliste.
+      Die Anwendung kann <a href="https://mrmarans.github.io/BH-Webapp/main.html">hier</a> ausprobiert werden, den Code findest du <a href="https://github.com/MrMarans/BH-Webapp">hier</a></p>
+      <p class="ProjektDescriptionText">
+        Auf der Webseite gibt man seine Maße ein und das Ergebnis wird anschließend dargestellt. Passend dazu werden jeweils immer
+        Animationen angezeigt.
+      </p>
+
+      <h4 class="ProjectSubTitle">Schnellüberblick</h4>
+      <ul>
+        <li>HTML, CSS, JS</li>
+        <li>Einzelprojekt</li>
+        <li>Dauer: 3 Monate</li>
+      </ul>
+
+      <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
+      <p class="ProjektDescriptionText">
+       Ich hab mitbekommen, dass scheinbar ein Großteil der Frauen die falsche BH-Größe tragen. Und weil meine Kollegin zufällig 
+       eine Ausbildung bei Mey gemacht hatte, kamen ich so auf die Idee, die Anwendung zu machen und ggf. mit Mey zu kooperieren.
+      <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
+      <p class="ProjektDescriptionText">
+      Prinzipiell habe ich nur 4 Pages gemacht, welche sich nacheinander sichtbar schalten. Und die Variablen, die man in die Felder
+      eingibt, werden mit den Daten von Meys Größtentabelle verglichen.  
+      </p>
+      <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
+      <p class="ProjektDescriptionText">
+        Ist zwar responsive, aber auf jeden Fall nicht perfekt, reicht aber.</p>
+      <div class="container">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
+        <!-- Weitere Bilder hier einfügen -->
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
 
   <script src="script.js"></script>
