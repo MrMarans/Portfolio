@@ -155,30 +155,26 @@ function reverseElements() {
 
 
 
-async function toggleProjectDetails(deactivate, activate) {
-  var activateString = activate.String
-  document.getElementById("backButton").onclick = function() {
-    toggleProjectDetails(activate,deactivate);
-  }; 
+async function toggleProjectDetails(deactivate, activate, iframe) {
+
+//  document.getElementById("backButton").onclick = function() {
+//    toggleProjectDetails(activate,deactivate);
+//  }; 
   const obj = document.getElementById("transition");
   obj.style.transition = "width 0.25s ease-in";
   obj.style.width = "100%";
   obj.style.right = "auto";
   await new Promise(resolve => setTimeout(resolve, 250));
   document.getElementById(deactivate).style.display="none";
+  document.getElementById(activate).style.display="block";
+  document.getElementById("iframe").src = "subsites/"+iframe+".html";
+
   const img = document.getElementById("Logo");
   img.style.filter = "blur(0px)";
   img.style.opacity = "1";
   await new Promise(resolve => setTimeout(resolve, 500));
   await new Promise(resolve => setTimeout(resolve, 250)); //wait until dissolve
-  const projectContainer =  document.getElementById("projects-container");
-  if(projectContainer.style.display == "none")
-   { projectContainer.style.display = "block";}
-   else
-   {
-     projectContainer.style.display = "none";
-   }
-   document.getElementById(activate).style.display="block";
+  
   img.style.opacity = "0";
   img.style.filter = "blur(5px)";
   await new Promise(resolve => setTimeout(resolve, 500));

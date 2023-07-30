@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Ron Metzger</title>
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+<body>
+
+        <h3 class="ProjectTitle">3D Print Helper App</h3>
+        <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit
+          Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der
+          Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem
+          PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine
+          Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den
+          Demonstrator hinaus gingen.</p>
+        <h4 class="ProjectSubTitle">Schnellüberblick</h4>
+        <ul>
+          <li>Unity</li>
+          <li>Vuforia für AR Objekterkennung für Android</li>
+          <li>Agora für Voice- und Videochat</li>
+          <li>Mirror für Multiplayer</li>
+          <li>Einzelprojekt</li>
+          <li>Projektdauer: 3 Wochen</li>
+        </ul>
+
+        <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
+        <p class="ProjektDescriptionText">Bei technischen Problemen gibt es nur wenige Möglichkeiten, wie man von
+          einem Unternehmen Hilfe erhalten kann: Oftmals sind es entweder einfache Webseiten, die Lösungen auflisten,
+          oder man schreibt über einen Chat, welcher manchmal sogar von weniger nützlichen Bots beantwortet werden.
+          Der letzte Funkte Hoffnung liegt dann bei einem Telefonsupport. Doch hier kann es durchaus schwer sein die
+          nötigen Problematiken gut sprachlich darzustellen oder visuelles entsprechend zu beschreiben. Für den
+          Support Mensch ist es dann wie das suchen der Nadel im Heuhaufen. Das Konzept der 3D Print Helper App ist
+          demnach, dieses Serviceproblem zu lösen. Dies soll mit AR gelöst werden, wodurch der Supporter nicht nur ein
+          Kamerafeed erhält, sondern der Nutzer die richtigen Komponenten gehighlightet bekommt. Somit könnte eine
+          Unterhaltung mit der App wie folgt aussehen:</p>
+        <ul>
+          <li>Nutzer: Guten Tag, ich habe ein Problem. Mein Druck sieht immer schrecklich aus, aber ich weiß nicht
+            warum.</li>
+          <li>Support: Alles klar, wird etwas auf Ihrem Monitor dargestellt?</li>
+          <li>Nutzer: Da steht, dass der Extruder verstopft ist. Aber was ist der Extruder?</li>
+          <li>Support: Einen Moment. Auf Ihrem Smartphone wird nun sichtbar, was Sie öffnen müssen und was der
+            Extruder ist. Sehen Sie es?</li>
+          <li>Nutzer: Ah ja, vielen Dank. Ich schraube das kurz auf.</li>
+        </ul>
+        <p class="ProjektDescriptionText">Der klare Vorteil hiervon ist, dass so auch ein besseres Supporterlebnis
+          umgesetzt werden kann, ohne teure Kosten, die bei einer Fahrt zum Kunden anfallen würden. Zudem braucht der
+          Nutzer nur ein Smartphone oder Tablet. Teure Geräte wie die Hololens sind so theoretisch nicht nötig, auch
+          wenn eine Adaption für die Hololens natürlich beide Hände frei hält.</p>
+        <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
+        <p class="ProjektDescriptionText">Diese Anwendung wurde nur für Android in Unity 2021.3.27f1 entwickelt.
+          Prinzipiell ist die App auch für IOS sowie Hololens umsetzbar. Für die Objekterkennung wurde Vuforia
+          genutzt. Vuforia ist eine Package für Unity, mit dem auch die Objekterkennung für Android möglich ist.
+          Hierfür muss ein möglichst exakter digitaler Zwilling vorliegen. Ein digitaler Zwilling des 3D Druckers war
+          aus einem Studentenprojekt vorhanden, weshalb dies nicht extra erstellt werden musste.<br><br>
+          Zunächst wurde mithilfe von Vuforia ein Model Target entwickelt, welcher dann in Unity importiert wurde.
+          Anschließend wurden das 3D Model des 3D Druckers importiert und erhielt entsprechende Materialien. Auch
+          wurden die nötigen Komponenten des 3D Druckers, welche für den Demonstrator auswählbar gemacht werden
+          sollten, definiert. <br><br>
+          Um den Sound- und Videofeed vom Nutzer zum Support zu übertragen, wurde Agora genutzt. Agora ist ein
+          Service, der für Video- und Sprachchat für Videospiele einfach ermöglicht. Die Funktion von Agoras
+          Videochat-Funktion wurde dann so umgearbeitet, dass nicht ein Kamerafeed, sondern die Bildschirminhalte des
+          Nutzers gestreamt werden konnte. Dadurch kann der Support auch die AR Überlagungen im gestreamten Feed
+          sehen.<br><br>
+          Um nun Eingaben vom UI des Supports zum Nutzer zu senden, damit z. B. bestimmte Teile des 3D Druckers
+          animieren oder leuchten, muss noch eine Verbindung vorhanden sein, um Variablen auszutauschen. Hierfür wurde
+          Mirror für Unity genutzt. So werden P2P Verbindungen aufgebaut, womit die übers UI des Supports eingegebenen
+          Informationen an den Nutzer gesendet werden, wodurch z. B. Animationen gestartet oder Materialien gewechselt
+          werden. Die Verbindung zwischen dem Nutzer und Support passiert automatisch, wenn sich diese im gleichen
+          Netzwerk befinden. Ansonsten ist die Eingabe der IP notwendig.</p>
+        <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
+        <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit
+          Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der
+          Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem
+          PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine
+          Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den
+          Demonstrator hinaus gingen.</p>
+        <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
+        <p class="ProjektDescriptionText">Der Prototyp nutzt zwei Systeme, die bei größerem Nutzen auf alle Fälle
+          kostenpflichtig wären (Agora und Vuforia). Die Verbindung durch Mirror benötigt leider die Eingabe einer IP,
+          da kein Matchmaking hierfür erstellt wurde. Die IP Adresse wird jedoch immer beim Nutzer auf dem Bildschirm
+          dargestellt, sodass der Support, sobald er sich mit dem Videofeed verbunden hat, selber ablesen kann. Auch
+          kann immer nur eine Connection gleichzeitig bestehen, also nur ein Nutzer mit einem Supporter. Mehrere
+          Connections wurden im Zuge dessen, weil es sich um einen Demonstrator handelt, nicht umgesetzt. Diese
+          Einschränkungen sind jedoch mit deutlich mehr Zeitaufwand alle möglich aufzuheben.</p>
+        <div class="container">
+          <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
+          <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
+          <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
+          <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
+          <!-- Weitere Bilder hier einfügen -->
+        </div>
+
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0"
+          allow="accelerometer; autoplay; 
+  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+</body>
+
+</html>

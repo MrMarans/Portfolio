@@ -24,6 +24,7 @@ body::-webkit-scrollbar{
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--white-color);
 }
 
 body,

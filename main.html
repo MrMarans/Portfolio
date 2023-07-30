@@ -37,6 +37,7 @@
       </ul>
     </nav>
 
+    <!--
     <div id="aboutMe topline" class="section">
 
       <div id="timeline">
@@ -51,6 +52,7 @@
           <div class="circle" id="circle4"></div>
         </div>
       </div>
+    -->
 
 
 
@@ -70,7 +72,7 @@
 
 
       <div class="projects">
-        <div class="SingleProject xr" onclick="toggleProjectDetails('MainSite','3DPrint')">
+        <div class="SingleProject xr" onclick="toggleProjectDetails('MainSite','projects-container' ,'3DPrint')">
           <div class="imgBox"><img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg"
               class="imges"></div>
           <div class="TextBox">
@@ -79,42 +81,42 @@
           </div>
         </div>
 
-        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'CoffeeBox')">
+        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'projects-container' ,'CoffeeBox')">
           <div class="imgBox"><img src="preview.jpg" class="imges"></div>
           <div class="TextBox">
             <h2 class="Title">CoffeeBox</h2>
             <p class="paragraph">Jetzt wird sogar die Kaffeemaschine Smart und die Probleme mit dem Kaffeegeld sind Geschichte</p>
           </div>
         </div>
-        <div class="SingleProject video" onclick="toggleProjectDetails('MainSite', 'IAOPodcast')">
+        <div class="SingleProject video" onclick="toggleProjectDetails('MainSite', 'projects-container' ,'IAOPodcast')">
           <div class="imgBox"><img src="Images/PodcastImage.PNG" class="imges"></div>
           <div class="TextBox">
             <h2 class="Title">Podcast</h2>
             <p class="paragraph">Produktion einer Podcastreihe für das Projekt "Kompetenzzentrum Smart Services"</p>
           </div>
         </div>
-        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'Sport-Tracker')">
+        <div class="SingleProject microcontroller" onclick="toggleProjectDetails('MainSite', 'projects-container' ,'Sport-Tracker')">
           <div class="imgBox"><img src="Images/SportWebsite.PNG" class="imges"></div>
           <div class="TextBox">
             <h2 class="Title">Sport-Tracker</h2>
             <p class="paragraph">Dieser Text ist ein gaaanz langer Beschreibender Text über das Projekt</p>
           </div>
         </div>
-        <div class="SingleProject xr" onclick="toggleProjectDetails('MainSite', 'Vishoelisation')">
+        <div class="SingleProject xr" onclick="toggleProjectDetails('MainSite', 'projects-container' ,'Vishoelisation')">
           <div class="imgBox"><img src="Images/Schuh Kaufmann.PNG" class="imges"></div>
           <div class="TextBox">
             <h2 class="Title">Vishoelisation</h2>
             <p class="paragraph">Darstellung von Produktvariationen über AR Produkterkennung</p>
           </div>
         </div>
-        <div class="SingleProject xr" onclick="toggleProjectDetails('MainSite', 'VR-Schnorcheln')">
+        <div class="SingleProject xr" onclick="toggleProjectDetails('MainSite','projects-container' ,'VR-Schnorcheln')">
           <div class="imgBox"><img src="https://www.badeparadies-schwarzwald.de/__we_thumbs__/1131_14_Galaxy_Galaxino-Club_Vorteile_1440x810px.jpg" class="imges"></div>
           <div class="TextBox">
             <h2 class="Title">Abenteuer mit Galaxino!</h2>
             <p class="paragraph">Weltneuheit: VR-Schnorchel-Spiel mit Positions-Tracking!</p>
           </div>
         </div>
-        <div class="SingleProject sonstige" onclick="toggleProjectDetails('MainSite', 'BH-WebApp')">
+        <div class="SingleProject sonstige" onclick="toggleProjectDetails('MainSite', 'projects-container','BH-WebApp')">
           <div class="imgBox"><img src="Images/BH App.PNG" class="imges"></div>
           <div class="TextBox">
             <h2 class="Title">Meys BH-Smartmirror Webanwendung</h2>
@@ -122,7 +124,7 @@
           </div>
         </div>
 
-        <div class="SingleProject XR microcontroller" onclick="toggleProjectDetails('MainSite', 'VRonGlove')">
+        <div class="SingleProject XR microcontroller" onclick="toggleProjectDetails('MainSite','projects-container', 'VRonGlove')">
           <div class="imgBox"><img src="Images/Render8.jpg" class="imges"></div>
           <div class="TextBox">
             <h2 class="Title">VRonGlove</h2>
@@ -130,7 +132,7 @@
           </div>
         </div>
 
-        <div class="SingleProject video" onclick="toggleProjectDetails('MainSite', 'BH-WebApp')">
+        <div class="SingleProject video" onclick="toggleProjectDetails('MainSite','projects-container', 'BH-WebApp')">
           <div class="imgBox"><img src="Images/BH App.PNG" class="imges"></div>
           <div class="TextBox">
             <h2 class="Title">Nine.Ron.Ron Filmproduktion</h2>
@@ -138,58 +140,7 @@
           </div>
         </div>
       </div>
-      <!-- <div class="project-list">
-    
-    
-    
-    
-    
-        <div class="project xr">
-        <div class="project-box" onclick="toggleProjectDetails(this)">
-          <img src="preview.jpg" alt="Projekt 3">
-          <div class="project-info">
-            <h3>Projekt 3 (XR)</h3>
-            <p>Kurze Beschreibung des Projekts 3.</p>
-          </div>
-        </div>
-      </div>
-      <div class="project microcontroller">
-        <div class="project-box">
-          <img src="preview.jpg" alt="Projekt 4">
-          <div class="project-info">
-            <h3>Projekt 4 (Microcontroller)</h3>
-            <p>Kurze Beschreibung des Projekts 4.</p>
-          </div>
-        </div>
-      </div>
-      <div class="project video">
-        <div class="project-box">
-          <img src="preview.jpg" alt="Projekt 5">
-          <div class="project-info">
-            <h3>Projekt 5 (Video)</h3>
-            <p>Kurze Beschreibung des Projekts 5.</p>
-          </div>
-        </div>
-      </div>
-      <div class="project microcontroller">
-        <div class="project-box">
-          <img src="preview.jpg" alt="Projekt 4">
-          <div class="project-info">
-            <h3>Projekt 1 (Microcontroller)</h3>
-            <p>Kurze Beschreibung des Projekts 1.</p>
-          </div>
-        </div>
-      </div>
-      <div class="project sonstige">
-        <div class="project-box">
-          <img src="preview.jpg" alt="Projekt 6">
-          <div class="project-info">
-            <h3>Projekt 6 (Sonstige)</h3>
-            <p>Kurze Beschreibung des Projekts 6.</p>
-          </div>
-        </div>
-      </div>
-    </div>-->
+     
 
     </div>
     <div id="impressum" class="section topline">
@@ -200,8 +151,8 @@
 
 
 
-  <div id="projects-container" style="display: none;">
-    <div id="backButton">
+  <div id="projects-container" style="display: none; width: 100vw; height: 100%;">
+    <div id="backButton" onclick="toggleProjectDetails('projects-container', 'MainSite')">
       < </div>
         <!--
         3D Print
@@ -211,439 +162,7 @@
         Vishoelisation
         Galaxino VR Schnorcheln
         ---->
-        <!--------------------------------------------------->
-        <div id="3DPrint" style="display: none; margin-bottom: 5em;">
-
-          <h3 class="ProjectTitle">3D Print Helper App</h3>
-          <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit
-            Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der
-            Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem
-            PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine
-            Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den
-            Demonstrator hinaus gingen.</p>
-          <h4 class="ProjectSubTitle">Schnellüberblick</h4>
-          <ul>
-            <li>Unity</li>
-            <li>Vuforia für AR Objekterkennung für Android</li>
-            <li>Agora für Voice- und Videochat</li>
-            <li>Mirror für Multiplayer</li>
-            <li>Einzelprojekt</li>
-            <li>Projektdauer: 3 Wochen</li>
-          </ul>
-
-          <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
-          <p class="ProjektDescriptionText">Bei technischen Problemen gibt es nur wenige Möglichkeiten, wie man von
-            einem Unternehmen Hilfe erhalten kann: Oftmals sind es entweder einfache Webseiten, die Lösungen auflisten,
-            oder man schreibt über einen Chat, welcher manchmal sogar von weniger nützlichen Bots beantwortet werden.
-            Der letzte Funkte Hoffnung liegt dann bei einem Telefonsupport. Doch hier kann es durchaus schwer sein die
-            nötigen Problematiken gut sprachlich darzustellen oder visuelles entsprechend zu beschreiben. Für den
-            Support Mensch ist es dann wie das suchen der Nadel im Heuhaufen. Das Konzept der 3D Print Helper App ist
-            demnach, dieses Serviceproblem zu lösen. Dies soll mit AR gelöst werden, wodurch der Supporter nicht nur ein
-            Kamerafeed erhält, sondern der Nutzer die richtigen Komponenten gehighlightet bekommt. Somit könnte eine
-            Unterhaltung mit der App wie folgt aussehen:</p>
-          <ul>
-            <li>Nutzer: Guten Tag, ich habe ein Problem. Mein Druck sieht immer schrecklich aus, aber ich weiß nicht
-              warum.</li>
-            <li>Support: Alles klar, wird etwas auf Ihrem Monitor dargestellt?</li>
-            <li>Nutzer: Da steht, dass der Extruder verstopft ist. Aber was ist der Extruder?</li>
-            <li>Support: Einen Moment. Auf Ihrem Smartphone wird nun sichtbar, was Sie öffnen müssen und was der
-              Extruder ist. Sehen Sie es?</li>
-            <li>Nutzer: Ah ja, vielen Dank. Ich schraube das kurz auf.</li>
-          </ul>
-          <p class="ProjektDescriptionText">Der klare Vorteil hiervon ist, dass so auch ein besseres Supporterlebnis
-            umgesetzt werden kann, ohne teure Kosten, die bei einer Fahrt zum Kunden anfallen würden. Zudem braucht der
-            Nutzer nur ein Smartphone oder Tablet. Teure Geräte wie die Hololens sind so theoretisch nicht nötig, auch
-            wenn eine Adaption für die Hololens natürlich beide Hände frei hält.</p>
-          <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
-          <p class="ProjektDescriptionText">Diese Anwendung wurde nur für Android in Unity 2021.3.27f1 entwickelt.
-            Prinzipiell ist die App auch für IOS sowie Hololens umsetzbar. Für die Objekterkennung wurde Vuforia
-            genutzt. Vuforia ist eine Package für Unity, mit dem auch die Objekterkennung für Android möglich ist.
-            Hierfür muss ein möglichst exakter digitaler Zwilling vorliegen. Ein digitaler Zwilling des 3D Druckers war
-            aus einem Studentenprojekt vorhanden, weshalb dies nicht extra erstellt werden musste.<br><br>
-            Zunächst wurde mithilfe von Vuforia ein Model Target entwickelt, welcher dann in Unity importiert wurde.
-            Anschließend wurden das 3D Model des 3D Druckers importiert und erhielt entsprechende Materialien. Auch
-            wurden die nötigen Komponenten des 3D Druckers, welche für den Demonstrator auswählbar gemacht werden
-            sollten, definiert. <br><br>
-            Um den Sound- und Videofeed vom Nutzer zum Support zu übertragen, wurde Agora genutzt. Agora ist ein
-            Service, der für Video- und Sprachchat für Videospiele einfach ermöglicht. Die Funktion von Agoras
-            Videochat-Funktion wurde dann so umgearbeitet, dass nicht ein Kamerafeed, sondern die Bildschirminhalte des
-            Nutzers gestreamt werden konnte. Dadurch kann der Support auch die AR Überlagungen im gestreamten Feed
-            sehen.<br><br>
-            Um nun Eingaben vom UI des Supports zum Nutzer zu senden, damit z. B. bestimmte Teile des 3D Druckers
-            animieren oder leuchten, muss noch eine Verbindung vorhanden sein, um Variablen auszutauschen. Hierfür wurde
-            Mirror für Unity genutzt. So werden P2P Verbindungen aufgebaut, womit die übers UI des Supports eingegebenen
-            Informationen an den Nutzer gesendet werden, wodurch z. B. Animationen gestartet oder Materialien gewechselt
-            werden. Die Verbindung zwischen dem Nutzer und Support passiert automatisch, wenn sich diese im gleichen
-            Netzwerk befinden. Ansonsten ist die Eingabe der IP notwendig.</p>
-          <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
-          <p class="ProjektDescriptionText">Mit diesem Demonstrator konnte ich die ersten Erfahrungen sammeln mit
-            Vuforia, mit dem ich noch viele weitere Demonstratoren entwickelte. Ich habe mich zudem während der
-            Entwicklung tief mit verschiedenen Tools beschäftigt, mit denen ein Multiplayer aufgebaut und lokal an einem
-            PC getestet werden kann. Nachdem die Entscheidung auf Mirror fiel, habe ich damit zunächst einige kleine
-            Experimente gemacht, um Limitationen und Möglichkeiten zu testen, die weit über dem nötigen Wissen für den
-            Demonstrator hinaus gingen.</p>
-          <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
-          <p class="ProjektDescriptionText">Der Prototyp nutzt zwei Systeme, die bei größerem Nutzen auf alle Fälle
-            kostenpflichtig wären (Agora und Vuforia). Die Verbindung durch Mirror benötigt leider die Eingabe einer IP,
-            da kein Matchmaking hierfür erstellt wurde. Die IP Adresse wird jedoch immer beim Nutzer auf dem Bildschirm
-            dargestellt, sodass der Support, sobald er sich mit dem Videofeed verbunden hat, selber ablesen kann. Auch
-            kann immer nur eine Connection gleichzeitig bestehen, also nur ein Nutzer mit einem Supporter. Mehrere
-            Connections wurden im Zuge dessen, weil es sich um einen Demonstrator handelt, nicht umgesetzt. Diese
-            Einschränkungen sind jedoch mit deutlich mehr Zeitaufwand alle möglich aufzuheben.</p>
-          <div class="container">
-            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
-            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
-            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
-            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
-            <!-- Weitere Bilder hier einfügen -->
-          </div>
-
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0"
-            allow="accelerometer; autoplay; 
-    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <!--------------------------------------------------->
-        <div id="CoffeeBox" style="display: none; margin-bottom: 5em;">
-
-          <h3 class="ProjectTitle">CoffeeBox</h3>
-          <p class="ProjektDescriptionText">Dieser Demonstrator ist der einzige Demonstrator, den ich an beruflich an
-            der Hochschule Furtwangen mit einem Microcontroller erstellt habe. </p>
-          <p class="ProjektDescriptionText">Mit der NFC Karte der Hochschule kann Kaffee gebucht werden, worraufhin die
-            Kaffeemühle aktiviert wird, wenn genug Credits vorhanden sind. Die Datenbank für die Credits befinden sich
-            lokal auf einer SD Karte sowie, als Backup, in einer Google Sheet.
-            Die Credits können zudem über einen Telegram-Bot ausgelesen und erhöht oder niedriger gesetz werden. Auch
-            für Veranstaltungen sie kleine Funktionen wie der "FreeCoffee" Modus implementiert.
-          </p>
-
-          <h4 class="ProjectSubTitle">Schnellüberblick</h4>
-          <ul>
-            <li>ESP32 Dev-Module</li>
-            <li>SD Karte und Reader</li>
-            <li>NFC Lesegerät</li>
-            <li>Google Sheets</li>
-            <li>Telegram-Bot</li>
-            <li>Gruppenprojekt</li>
-          </ul>
-
-          <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
-          <p class="ProjektDescriptionText">Jeder, der Kaffee mag, kennt es im eigenen Unternehmen: Immer wieder Stress,
-            weil die Kaffeetasse zu leer ist.
-            Aber jetzt nicht mehr! Nun heißt es, entweder den gemühlten Kaffee bereits mitbringen oder nur welchen
-            erhalten, wenns genug Coins gibt! Damit ist, bis auf das Problem mit der Milch, das ganze zumindest ein
-            klein wenig simpler.
-          </p>
-          <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
-          <p class="ProjektDescriptionText">
-            Für den Demonstrator wurde ein ESP32, einfach nur wegen seinem enthaltenem Wifi-Chip, genutzt. Das Verbinden
-            des NFC Readers und SD Readers benötigte immerhin SPI um zu funktionieren. <br>
-            Zudem wurde ein OLED Bildschirm für die Visualisierungen genutzt. Einträge in Google Sheets funktionieren
-            über Google Scripts. Der ESP öffnet praktisch einen Link, in dem alle Informationen drin sind. Das Google
-            Script teilt diese Informationen dann auf und platziert sie in die jeweiligen Spalten.<br>
-            Bei jeder Buchung erhält der Kaffee-Chef immer eine Benachrichtigung über Telegram mit der anonymen
-            Karten-ID. Diese ID kann dann über Kommandos aufgeladen werden.
-          </p>
-          <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
-          <p class="ProjektDescriptionText">Das Zusammenarbeiten verschiedener Elektroteile, mit denen ich davor noch
-            nicht gearbeitet habe. Das rumspielen mit einem Telegram-Bot und Google Sheets war auf jeden Fall aber mein
-            Highlight, welche in Versuchen werde, in weitere Projekte einzubinden.</p>
-          <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
-          <p class="ProjektDescriptionText">
-            Den Prototypen habe ich nach dem implementieren aller Funktionen, aufgrund von Urlaub, abgegeben.
-            Nach der weitergabe wurde noch eine Box konstruiert, 3D gedruckt und die gelötetete Elektronik und
-            verkabelung darin versteckt.
-            Der Prototyp befindet sich aktuell noch in der aktiven Testphase im Erlebnisraum Furtwangen.
-          </p>
-          <div class="container">
-            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
-            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
-            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
-            <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
-            <!-- Weitere Bilder hier einfügen -->
-          </div>
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0"
-            allow="accelerometer; autoplay; 
-    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <!--------------------------------------------------->
-        <div id="IAOPodcast" style="display: none; margin-bottom: 5em;">
-
-          <h3 class="ProjectTitle">Podcast</h3>
-          <p class="ProjektDescriptionText">Diese Videopodcastreihe habe ich für das Projekt "Kompetenzzentrum Smart
-            Service" gemacht. Hierfür sind 6 Folgen geplant/in der Produktion. </p>
-
-          <h4 class="ProjectSubTitle">Schnellüberblick</h4>
-          <ul>
-            <li>Alles in der ganzen Produktion (außer Drohnenaufnahmen)</li>
-            <li>Premiere Pro, After Effects</li>
-            <li>Davinci Resolve</li>
-            <li>Sony a6500, Nikon 5DM4</li>
-          </ul>
-
-          <h4 class="ProjectSubTitle">Auftrag</h4>
-          <p class="ProjektDescriptionText">Für die Podcastsreihe zeigen verschiedene Institute und öffentliche
-            Einheiten, wie ein intelligenter Service schon heute im Mittelstand aussehen kann.</p>
-
-          <ul>
-            <li>Folge 1: Die Pieper im Einzelhandel (Name nicht final)</li>
-            <li>Was zur Hölle ist Servitisation?</li>
-            <li>-</li>
-            <li>-</li>
-            <li>-</li>
-            <li>-</li>
-          </ul>
-
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0"
-            allow="accelerometer; autoplay; 
-  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
-
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <!--------------------------------------------------->
-    <div id="Sport-Tracker" style="display: none; margin-bottom: 5em;">
-
-      <h3 class="ProjectTitle">Sport-Tracker</h3>
-      <p class="ProjektDescriptionText">Dies ist ein privates Projekt für einen Nachbarn. Ein Webserver stellt eine
-        Wasserwaage dar und tracked Erfolge. Das Projekt ist <a
-          href="https://github.com/MrMarans/ESP32-Sensor--Sport-Projekt">hier</a> runtergeladen werden. </p>
-
-      <p class="ProjektDescriptionText">Ein ESP32 hat einen IMU Sensor angeschlossen. Dessen Rotationsbewegungen werden
-        auf einer Webseite live dargestellt. Zudem gibt es eine Timer-Funktion und eine Bewegungshistorie.
-      </p>
-
-      <h4 class="ProjectSubTitle">Schnellüberblick</h4>
-      <ul>
-        <li>ESP32 Dev-Module</li>
-        <li>Websockets</li>
-        <li>Webserver</li>
-        <li>HTML, CSS, JS</li>
-      </ul>
-
-      <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
-      <p class="ProjektDescriptionText">Das Sportgerät des Nachbars ist eine Konstruktion, auf welcher man steht.
-        Während man breitbeinig auf einem Brett steht, welches nach Links und Rechts umkippen kann, muss man versuchen,
-        gerade wie möglich zu stehen.
-        Leider reicht beim Nutzen des Geräts das eigene Gewichtssinn nicht aus, um immer zu wissen, wo der Mittelpunkt
-        ist. Dafür hilft diese Anwendung und zeigt in der Historie nach jedem Training immer an, wie es so lief.
-      </p>
-      <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
-      <p class="ProjektDescriptionText">
-        Hier wurde der ESP32 genutzt wegen seinem eingebautem Wifi-Chip. Ich hatte zudem zu der Zeit noch keine 8266,
-        heute würde ich den nutzen.
-        Jedenfalls wird ein Webserver vom ESP gestartet, wenn man ihn einschält. Auf Wunsch verbindet sich dieser nicht
-        ans Wifi, sondern baut sein eigenes Netz auf. Nach nem Login kann man dann auf die Webseite, die über Websockets
-        live aktualisiert.
-
-      </p>
-      <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
-      <p class="ProjektDescriptionText">Hier habe ich mich zum ersten mal richtig mit Webservern auf ESP32 beschäftigt,
-        sowie mit Websockets. Daher war das nochmal bezüglich Typescript ganz interessant.</p>
-      <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
-      <p class="ProjektDescriptionText">
-        Leider muss man dem IMU Sensor immer wieder neu kalibrieren über die Webseite, weil das Rauschen bei meinem
-        einfach zu stark war, selbst nach DataFusion und Rauschfiltern. Einziges, was ich nicht probiert habe,
-        Ist das Rauschen individuell auf meinen genutzten Sensor zu kalibrieren.
-      </p>
-      <div class="container">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
-        <!-- Weitere Bilder hier einfügen -->
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <!--------------------------------------------------->
-
-    <div id="Vishoelisation" style="display: none; margin-bottom: 5em;">
-
-      <h3 class="ProjectTitle">Vishoelisation</h3>
-      <p class="ProjektDescriptionText">Hier werden Schuhe erkannt und Variationen dieser dargestellt. Dieser Demonstrator in Zusammenarbeit mit Schuh-Kaufmann Heilbronn und dem Urban Innovation Hub Heilbronn entstanden. Im Urban Innovation Hub wird es zudem dauerhaft ausgestellt.</p>
-      <p class="ProjektDescriptionText">Diese Anwendung für Android ist speziell für den Einzelhandel und dem Problem, dass das Schuhangebot zu groß ist für die meisten Läden von Einzelhändlern.
-      </p>
-
-      <h4 class="ProjectSubTitle">Schnellüberblick</h4>
-      <ul>
-        <li>Unity</li>
-        <li>Vuforia</li>
-        <li>Einzelprojekt</li>
-        <li>Dauer: 1 Monate</li>
-      </ul>
-
-      <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
-      <p class="ProjektDescriptionText">Das Schuhangebot ist riesig. Und daher kann der normale Einzelhändler einfach nicht alle
-        Schuhe und dann noch Farbvariationen im Lagerhaben. Das gute bei Farbvariationen ist, dass die Passform noch immer die gleiche ist.
-        Daher kann der Kunde durch einen Verkäufer mit diese App zunächst einen Schuh in einer zufälligen Farbe anziehen und sich dann
-        die gewünschte Farbe nach Hause liefern lassen. Damit besitzt der lokale Einzelhandel zudem direkt den Vorteil, nicht nur einen Online-Vertrieb zu haben, sondern auch eine lokale Stelle mit dessen Vorteilen.
-      </p>
-      <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
-      <p class="ProjektDescriptionText">
-        Es war ein klein wenig Tricky herauszufinden, wie man verschiedene Objekte gleichzeitig in Vuforia erkennen lassen kann. 
-        Das ganze UI baut sich beim Start responsive auf durch verschiedenste Prefabs. Hier habe ich entsprechend zum ersten Mal
-        ein richtig gescheites Menü erstellt. Auch Animationen innerhalb des Menüs sind durch Code geased und alles super einfach anpassbar über den Inspector.
-      </p>
-      <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
-      <p class="ProjektDescriptionText">Bei diesem Demonstrator habe ich besonders auf guten Code geachtet sowie auf die Responsiveness des schönen Menüs, weil klar war, das diese Anwendung besonders oft gezeigt werden sowie von den Medien aufgegriffen werden wird.</p>
-      <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
-      <p class="ProjektDescriptionText">
-        Die App hat ein Kernproblem: Für die Erkennung der Schuhe wurden 3D Scans genutzt, die einfach zu groß sind, da keine Zeit war zur optimierung aller 3D Scan Meshes.
-        Daraus entstehen zwei Probleme: Auf vielen Geräten die älter sind als ungefähr 2021 stürzt die App einfach manchmal ab, weils einfach zu viel wird fürs Handy.
-        Zudem braucht die App etwa 17 Sekunden zum laden, weil die 3D Daten zum Start-Up direkt mitgeladen werden. Wenn optimierte 3D-Daten vorhanden wären, wären jedoch beide Probleme behoben. 
-      </p>
-      <div class="container">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
-        <!-- Weitere Bilder hier einfügen -->
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-
-    <!------------------------------------------------->
-
-    <div id="VR-Schnorcheln" style="display: none; margin-bottom: 5em;">
-
-      <h3 class="ProjectTitle">VR-Schnorcheln mit Galaxino!</h3>
-      <p class="ProjektDescriptionText">Schnorchel mit dieser VR-Anwendung im Badeparadies Titisee-Neustadt! Man trägt eine Schnorchelbrille, welches ein Smartphone dran hat. So schwimmt man virtuell im Ozean, physikalisch jedoch im Badeparadies. 
-
-      </p>
-      <p class="ProjektDescriptionText">
-        Die Anwendung wurde mithilfe der Firma Shuuna gemacht, welche die Technik des Trackings des Smartphones uns zur verfügung stellte. Ein Unity-Level mit Interaktionen für Cardboard-VR wurde fürs erkunden und erspielen erstellt worden.   
-      </p>
-
-      <h4 class="ProjectSubTitle">Schnellüberblick</h4>
-      <ul>
-        <li>Unity</li>
-        <li>Cardboard-VR-Like</li>
-        <li>Partnerprojekt</li>
-        <li>Dauer: 3 Monate</li>
-      </ul>
-
-      <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
-      <p class="ProjektDescriptionText">
-        Um für das Projekt "Kompetenzzentrum Smart Services" auch den Tourismus-Bereich abzugreifen, wurde Tourismus für ein kleines Bad geplant. Nachdem unser die Assetproduktion abgeschlossen war, wurde leider bekannt, dass das Schwimmbad für immer schließen musste.
-        Zu dieser Zeit war es hart um Schwimmbäder, da viele in Baden-Württemberg schließen mussten. Kinder hatten keine Möglichkeiten mehr schwimmen zu lernen.
-        <br> 
-        Daher kooperierten wir dann mit dem Badeparadies in Titisee-Neustadt und erstellten nun personalisierte Assets für ein Level. 
-        In diesem sucht man zusammen mit dem Maskotchen "Galaxino" das Korallenriff nach Münzen ab, bevor es Nacht ist. 
-      </p>
-      <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
-      <p class="ProjektDescriptionText">
-        Das Smartphone wird über drei "Muscheln" Sender getracked, die am Rand des Beckens sind. Die Rotation des Kopfs wird einfach über das Handy bestimmt.
-        Jedenfalls, da es keine Controller für die Anwendung gibt, kann man nur mit schauen und Kopf bewegen irgenwelche Interaktionen machen, weswegen wir uns auf Objekte Anstarren geeinigt haben.
-        Ansonsten wurde hier noch ein Toon-Look umgesetzt und das Spiel, aufgrund von VR fürs Handy, sehr stark optimiert, sodass es auf den genutzten Handy stets auf mind. 60FPS läuft.
-      </p>
-      <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
-      <p class="ProjektDescriptionText">Optimierung von 3D-Daten und Visuals für die Entwicklung fürs Smartphone.</p>
-      <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
-      <p class="ProjektDescriptionText">
-        Probleme gibt es bisher noch nicht. Es wird bald in die Testphase gehen, da eine Studie daraus entwickelt wird, wie immersiv VR und Wasser zusammen ist.   
-      </p>
-      <div class="container">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
-        <!-- Weitere Bilder hier einfügen -->
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <div id="BH-WebApp" style="display: none; margin-bottom: 5em;">
-
-      <h3 class="ProjectTitle">Die Mey BH-WebApp</h3>
-      <p class="ProjektDescriptionText"> Die Webanwendung wurde in Zusammenarbeit mit Mey entwickelt. Mey lieferte uns die notwendige BH Grötentabellenliste.
-      Die Anwendung kann <a href="https://mrmarans.github.io/BH-Webapp/main.html">hier</a> ausprobiert werden, den Code findest du <a href="https://github.com/MrMarans/BH-Webapp">hier</a></p>
-      <p class="ProjektDescriptionText">
-        Auf der Webseite gibt man seine Maße ein und das Ergebnis wird anschließend dargestellt. Passend dazu werden jeweils immer
-        Animationen angezeigt.
-      </p>
-
-      <h4 class="ProjectSubTitle">Schnellüberblick</h4>
-      <ul>
-        <li>HTML, CSS, JS</li>
-        <li>Einzelprojekt</li>
-        <li>Dauer: 3 Monate</li>
-      </ul>
-
-      <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
-      <p class="ProjektDescriptionText">
-       Ich hab mitbekommen, dass scheinbar ein Großteil der Frauen die falsche BH-Größe tragen. Und weil meine Kollegin zufällig 
-       eine Ausbildung bei Mey gemacht hatte, kamen ich so auf die Idee, die Anwendung zu machen und ggf. mit Mey zu kooperieren.
-      <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
-      <p class="ProjektDescriptionText">
-      Prinzipiell habe ich nur 4 Pages gemacht, welche sich nacheinander sichtbar schalten. Und die Variablen, die man in die Felder
-      eingibt, werden mit den Daten von Meys Größtentabelle verglichen.  
-      </p>
-      <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
-      <p class="ProjektDescriptionText">
-        Der Demonstrator ist nur nur befriedigend responsive, weil die Geräte, auf der die Webseite geplant dargestellt werden sollte, im Vorraus fest definiert waren: Tablet und 1080p PC für den Smartmirror. Die Webseite wird nur bei Veranstaltungen gezeigt und sonst nirgendwo sonst (wie in Läden) beworben.</p>
-      <div class="container">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
-        <!-- Weitere Bilder hier einfügen -->
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-
-    <div id="VRonGlove" style="display: none; margin-bottom: 5em;">
-
-      <h3 class="ProjectTitle">VRonGlove</h3>
-      <p class="ProjektDescriptionText">
-        Der VRonGlove ist ein Open-Source Motion Tracking Handschuh mit Force Feedback. Dies ist das Ergebnis meiner Master-Abschlussarbeit im Studienfach Medieninformatik. Ein Fokus des Handschuhs, die niedrigen Materialkosten, belaufen sich pro paar auf etwa 125€. Das Projekt wurde in der OpenGloves Kommunity aufgenommen und weiterentwickelt.
-      </p>
-
-      <h4 class="ProjectSubTitle">Schnellüberblick</h4>
-      <ul>
-        <li>Unreal Engine 4</li>
-        <li>ESP32</li>
-        <li>Bluetooth & Wifi</li>
-        <li>Blender</li>
-        <li>FDM-3D-Druck</li>
-        <li>Einzelprojekt</li>
-        <li>Dauer: 6 Moante</li>
-      </ul>
-
-      <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
-      <p class="ProjektDescriptionText">
-       Ich fand es kacke, dass alle Handschuhe, die man so kaufen kann, (für Studenten) so unglaublich teuer sind! Ich wollte sowas endlich mal ausprobieren. Jedenfalls, durch das aufkommen von V-Tuber wie <a href="https://www.youtube.com/@CodeMiko">Code Miko</a> und <a href="https://www.youtube.com/@AiAngel">AI Angel</a> wurde ich auf 
-       <a href="https://www.youtube.com/@LucasVRTech">LucidGlove</a> aufmerksam. Ich dachte mir, dass ich das besser kann mit dem Fokus auf Motion Capture,
-       und hab dann darin meine Masterthesis gemacht.
-      <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
-      <p class="ProjektDescriptionText">
-      Wer sich wirklich genauer dafür interessiert, kann sich meine <a href="https://drive.google.com/file/d/1sVgif6RaXKxMu-US_epVX-ChhevwDoT1/view?usp=sharing">Thesisdokument</a> gerne anschauen.
-      <br>
-      Genutzt werden drei Potentiometer sowie einen SG-90 Motor pro Finger, einen ESP32 pro Hand und, je nachdem, ob man Bluetooth oder Wifi zur drahtlosen Kommunikation nutzen möchte, einen ESP32 als Wifi-Empfangs-Dongle.
-      Unreal Engine liest die Daten aus und rotiert anhand der Daten dann das Rig. An Fingern gibts einen vorrausschauende Hit-Detector, der die Daten wieder an den ESP32 sendet, welcher die Motoren nutzt um die Finger zu blockieren.
-      Es ist sogar von der Software die Funktion für Vibrationsmotoren bereits eingebaut worden, jedoch habe ich diese an meine Handschuhversion nie angeschlossen.
-      </p>
-      <h4 class="ProjectSubTitle">Probleme des Projekts</h4>
-      <p class="ProjektDescriptionText">
-      Der Handschuh kann mit meiner Software nur in Unreal Engine genutzt werden. Die Adaption in OpenGloves ist jedoch einfach, wodurch der Handschuh für eine Hand voll VR Games auch genutzt werden kann. 
-      </p>
-      <div class="container">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
-        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
-        <!-- Weitere Bilder hier einfügen -->
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+        <embed src="subsites/3DPrint.html" width="100%" height="100%" frameBorder="0" id="iframe">
   </div>
 
   
