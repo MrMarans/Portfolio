@@ -42,8 +42,6 @@ p {
 
 embed{
  overflow-y: scroll;
- padding-left: 20%;
- padding-right: 20%;
 }
 
 #transition {
@@ -261,6 +259,11 @@ ul {
 .section {
   background-color: var(--white-color);
   text-align: center;
+}
+
+.project{
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .section h2 {
