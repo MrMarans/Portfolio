@@ -332,19 +332,18 @@ ul {
     width: 150px;
     margin-right: 20px;
   }
-}
-
-@media screen and (min-width: 768px) {
-  .project-box {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  
 
   .project-box img {
     flex: 0 0 30%;
     /* Hier kannst du die Breite anpassen */
     margin-right: 20px;
     margin-bottom: 20px;
+  }
+
+  .project-box {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .project-box .project-info {
