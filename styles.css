@@ -42,6 +42,8 @@ p {
 
 embed{
  overflow-y: scroll;
+ padding-left: 20%;
+ padding-right: 20%;
 }
 
 #transition {
@@ -540,8 +542,7 @@ ul {
   width: 100%;
   z-index: 9999;
   background-color: var(--white-color);
-  padding-left: 20%;
-  padding-right: 20%;
+
 }
 
 .ProjectTitle{
