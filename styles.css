@@ -40,6 +40,10 @@ p {
   color: white;
 }
 
+embed{
+ overflow-y: scroll;
+}
+
 #transition {
   position: fixed;
   height: 100%;
@@ -534,7 +538,6 @@ ul {
 #projects-container{
   position: absolute;
   width: 100%;
-  overflow: auto;
   z-index: 9999;
   background-color: var(--white-color);
   padding-left: 20%;

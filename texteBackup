@@ -155,41 +155,7 @@
         </div>
 
         <!--------------------------------------------------->
-        <div id="IAOPodcast" style="display: none; margin-bottom: 5em;">
-
-          <h3 class="ProjectTitle">Podcast</h3>
-          <p class="ProjektDescriptionText">Diese Videopodcastreihe habe ich für das Projekt "Kompetenzzentrum Smart
-            Service" gemacht. Hierfür sind 6 Folgen geplant/in der Produktion. </p>
-
-          <h4 class="ProjectSubTitle">Schnellüberblick</h4>
-          <ul>
-            <li>Alles in der ganzen Produktion (außer Drohnenaufnahmen)</li>
-            <li>Premiere Pro, After Effects</li>
-            <li>Davinci Resolve</li>
-            <li>Sony a6500, Nikon 5DM4</li>
-          </ul>
-
-          <h4 class="ProjectSubTitle">Auftrag</h4>
-          <p class="ProjektDescriptionText">Für die Podcastsreihe zeigen verschiedene Institute und öffentliche
-            Einheiten, wie ein intelligenter Service schon heute im Mittelstand aussehen kann.</p>
-
-          <ul>
-            <li>Folge 1: Die Pieper im Einzelhandel (Name nicht final)</li>
-            <li>Was zur Hölle ist Servitisation?</li>
-            <li>-</li>
-            <li>-</li>
-            <li>-</li>
-            <li>-</li>
-          </ul>
-
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0"
-            allow="accelerometer; autoplay; 
-  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         
-
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
 
     <!--------------------------------------------------->
     <div id="Sport-Tracker" style="display: none; margin-bottom: 5em;">

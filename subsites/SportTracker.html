@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Ron Metzger</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+<body>
+
+
+    <h3 class="ProjectTitle">Sport-Tracker</h3>
+    <p class="ProjektDescriptionText">Dies ist ein privates Projekt für einen Nachbarn. Ein Webserver stellt eine
+        Wasserwaage dar und tracked Erfolge. Das Projekt ist <a
+            href="https://github.com/MrMarans/ESP32-Sensor--Sport-Projekt">hier</a> runtergeladen werden. </p>
+
+    <p class="ProjektDescriptionText">Ein ESP32 hat einen IMU Sensor angeschlossen. Dessen Rotationsbewegungen werden
+        auf einer Webseite live dargestellt. Zudem gibt es eine Timer-Funktion und eine Bewegungshistorie.
+    </p>
+
+    <h4 class="ProjectSubTitle">Schnellüberblick</h4>
+    <ul>
+        <li>ESP32 Dev-Module</li>
+        <li>Websockets</li>
+        <li>Webserver</li>
+        <li>HTML, CSS, JS</li>
+    </ul>
+
+    <h4 class="ProjectSubTitle">Grundproblematik und Konzept</h4>
+    <p class="ProjektDescriptionText">Das Sportgerät des Nachbars ist eine Konstruktion, auf welcher man steht.
+        Während man breitbeinig auf einem Brett steht, welches nach Links und Rechts umkippen kann, muss man versuchen,
+        gerade wie möglich zu stehen.
+        Leider reicht beim Nutzen des Geräts das eigene Gewichtssinn nicht aus, um immer zu wissen, wo der Mittelpunkt
+        ist. Dafür hilft diese Anwendung und zeigt in der Historie nach jedem Training immer an, wie es so lief.
+    </p>
+    <h4 class="ProjectSubTitle">Technischer Hintergrund</h4>
+    <p class="ProjektDescriptionText">
+        Hier wurde der ESP32 genutzt wegen seinem eingebautem Wifi-Chip. Ich hatte zudem zu der Zeit noch keine 8266,
+        heute würde ich den nutzen.
+        Jedenfalls wird ein Webserver vom ESP gestartet, wenn man ihn einschält. Auf Wunsch verbindet sich dieser nicht
+        ans Wifi, sondern baut sein eigenes Netz auf. Nach nem Login kann man dann auf die Webseite, die über Websockets
+        live aktualisiert.
+
+    </p>
+    <h4 class="ProjectSubTitle">Persönliche Forschritte durch diesen Prototypen</h4>
+    <p class="ProjektDescriptionText">Hier habe ich mich zum ersten mal richtig mit Webservern auf ESP32 beschäftigt,
+        sowie mit Websockets. Daher war das nochmal bezüglich Typescript ganz interessant.</p>
+    <h4 class="ProjectSubTitle">Probleme des Prototyps</h4>
+    <p class="ProjektDescriptionText">
+        Leider muss man dem IMU Sensor immer wieder neu kalibrieren über die Webseite, weil das Rauschen bei meinem
+        einfach zu stark war, selbst nach DataFusion und Rauschfiltern. Einziges, was ich nicht probiert habe,
+        Ist das Rauschen individuell auf meinen genutzten Sensor zu kalibrieren.
+    </p>
+    <div class="container">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 1">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 2">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 3">
+        <img src="Screenshot_2023-06-09-13-26-22-05_92460851df6f172a4592fca41cc2d2e6.jpg" alt="Bild 4">
+        <!-- Weitere Bilder hier einfügen -->
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sOwtIkAO3ZI" frameborder="0" allow="accelerometer; autoplay; 
+    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+
+</html>
