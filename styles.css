@@ -12,25 +12,28 @@
 }
 
 body::-webkit-scrollbar{
-  display: none;
+ /* display: none;*/
 }
 
 /* Basis-Styles */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   background-color: var(--white-color);
+  height: 0vw;
 }
 
 body,
 html {
-  height: 100%;
   font-family: 'Bahnschrift', sans-serif;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: auto;
 }
 
 h1,
@@ -40,9 +43,6 @@ p {
   color: white;
 }
 
-embed{
- overflow-y: scroll;
-}
 
 #transition {
   position: fixed;
@@ -267,7 +267,8 @@ ul {
 }
 
 .YTVideo{
-  height: 400px;
+  aspect-ratio: 16/9;
+  margin-bottom: 10vw;
 }
 
 .section h2 {
@@ -314,13 +315,6 @@ ul {
   display: none;
 }
 
-.scrollable-content {
-  overflow-y: scroll;
-  height: calc(100vh - 50px);
-  background-color: var(--primary-color);
-  height: auto;
-  /* Ändere die Höhe auf "auto" */
-}
 
 .project-box img {
   max-width: 100px;
@@ -340,6 +334,7 @@ ul {
     display: flex;
     align-items: center;
     text-align: left;
+    flex-wrap: wrap;
   }
 
   .project-box img {
@@ -354,12 +349,6 @@ ul {
     margin-right: 20px;
     margin-bottom: 20px;
   }
-
-  .project-box {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .project-box .project-info {
     flex: 0 0 60%;
     /* Hier kannst du die Breite anpassen */
@@ -620,6 +609,9 @@ li{
 }
 iframe{
   width: 100%;
-  min-height: 100%;
-  height: auto;
+  height: 99%;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
 }
+

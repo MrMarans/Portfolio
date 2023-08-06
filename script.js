@@ -168,16 +168,23 @@ async function toggleProjectDetails(deactivate, activate, iframe) {
   document.getElementById(deactivate).style.display="none";
   document.getElementById(activate).style.display="block";
   document.getElementById("iframe").src = "subsites/"+iframe+".html";
-
+  if(deactivate!="MainSite"){
+  document.getElementById('projects').scrollIntoView();
+  }
+  else{
+    window.scrollTo(0, 0)
+  }
   const img = document.getElementById("Logo");
   img.style.filter = "blur(0px)";
   img.style.opacity = "1";
+  //
   await new Promise(resolve => setTimeout(resolve, 500));
   await new Promise(resolve => setTimeout(resolve, 250)); //wait until dissolve
   
   img.style.opacity = "0";
   img.style.filter = "blur(5px)";
   await new Promise(resolve => setTimeout(resolve, 500));
+
   obj.style.transition = "width 0.25s ease-out";
   obj.style.width = "0%";
   obj.style.right = "0px";
