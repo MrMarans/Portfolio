@@ -262,8 +262,12 @@ ul {
 }
 
 .project{
-  padding-left: 20%;
-  padding-right: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.YTVideo{
+  height: 400px;
 }
 
 .section h2 {
@@ -617,4 +621,5 @@ li{
 iframe{
   width: 100%;
   min-height: 100%;
+  height: auto;
 }
