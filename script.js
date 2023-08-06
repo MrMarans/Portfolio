@@ -156,23 +156,20 @@ function reverseElements() {
 
 
 async function toggleProjectDetails(deactivate, activate, iframe) {
-
-//  document.getElementById("backButton").onclick = function() {
-//    toggleProjectDetails(activate,deactivate);
-//  }; 
   const obj = document.getElementById("transition");
   obj.style.transition = "width 0.25s ease-in";
   obj.style.width = "100%";
   obj.style.right = "auto";
   await new Promise(resolve => setTimeout(resolve, 250));
-  document.getElementById(deactivate).style.display="none";
-  document.getElementById(activate).style.display="block";
-  document.getElementById("iframe").src = "subsites/"+iframe+".html";
-  if(deactivate!="MainSite"){
-  document.getElementById('projects').scrollIntoView();
+  document.getElementById(deactivate).style.display = "none";
+  document.getElementById(activate).style.display = "block";
+  document.getElementById("iframe").src = "subsites/" + iframe + ".html";
+  if (deactivate != "MainSite") {
+    document.getElementById('projects').scrollIntoView();
   }
-  else{
-    window.scrollTo(0, 0)
+  else {
+    window.scrollTo(0, 0);
+    changeLoadingIcon(iframe);
   }
   const img = document.getElementById("Logo");
   img.style.filter = "blur(0px)";
@@ -180,7 +177,7 @@ async function toggleProjectDetails(deactivate, activate, iframe) {
   //
   await new Promise(resolve => setTimeout(resolve, 500));
   await new Promise(resolve => setTimeout(resolve, 250)); //wait until dissolve
-  
+
   img.style.opacity = "0";
   img.style.filter = "blur(5px)";
   await new Promise(resolve => setTimeout(resolve, 500));
@@ -189,6 +186,35 @@ async function toggleProjectDetails(deactivate, activate, iframe) {
   obj.style.width = "0%";
   obj.style.right = "0px";
 }
+
+function changeLoadingIcon(activate) {
+  image = document.getElementById("Logo");
+  switch (activate) {
+    //XR
+    case "3DPrint":
+    case "Vishoelisation":
+    case "VRSchnorcheln":
+      image.src = "Images/metaverse-icon-modified.png";
+      break;
+    //Microcontroller
+    case "VRonGlove":
+      case "CoffeeBox":
+        case "SportTracker":
+          image.src = "Images/microchip-icon-modified.png";
+          break;
+    //Film
+    case "Nine.Ron.Ron":
+    case "IAOPodcast":
+      image.src = "Images/logo_weiß_rgb_transp.png";
+      break;
+
+    //other
+    case "BH-WebApp":
+      image.src = "Images/globe-network-icon-modified (1).png";
+      break;
+  }
+}
+
 //button color
 const buttons = document.querySelectorAll('.filter-button');
 
@@ -263,10 +289,10 @@ function loadJSONFile(name) {
     .then(response => response.json())
     .then(data => {
       const projectsContainer = document.getElementById('projects-container');
-      
+
       // Hier wird das gewünschte Projekt ausgewählt
       const selectedProject = name;
-      
+
       // Iteriere über die Projekte in der JSON-Datei
       data.projects.forEach(project => {
         // Überprüfe, ob der aktuelle Projekttitel mit dem ausgewählten Projekt übereinstimmt
@@ -281,17 +307,17 @@ function loadJSONFile(name) {
           descriptionElement.textContent = project.description;
           projectsContainer.appendChild(descriptionElement);
 
-          if(project.youtubeLink!=null){
-          const youtubeLinkElement = document.createElement('a');
-          youtubeLinkElement.textContent = "YouTube Video ansehen";
-          youtubeLinkElement.href=project.youtubeLink;
-          projectsContainer.appendChild(youtubeLinkElement);
+          if (project.youtubeLink != null) {
+            const youtubeLinkElement = document.createElement('a');
+            youtubeLinkElement.textContent = "YouTube Video ansehen";
+            youtubeLinkElement.href = project.youtubeLink;
+            projectsContainer.appendChild(youtubeLinkElement);
           }
 
-          if(project.imagePath!=null){
-          const imageElement = document.createElement('img');       
-          imageElement.src = project.imagePath;
-          projectsContainer.appendChild(imageElement);
+          if (project.imagePath != null) {
+            const imageElement = document.createElement('img');
+            imageElement.src = project.imagePath;
+            projectsContainer.appendChild(imageElement);
           }
         }
       });
