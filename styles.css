@@ -268,7 +268,7 @@ ul {
 
 .YTVideo{
   aspect-ratio: 16/9;
-  margin-bottom: 10vw;
+  margin-bottom: 2vw;
 }
 
 .section h2 {
@@ -500,7 +500,6 @@ ul {
 }
 
 .imgBox {
-  background-color: yellow;
   height: auto;
   width: auto;
   overflow: hidden;
