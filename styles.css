@@ -43,6 +43,10 @@ p {
   color: white;
 }
 
+a{
+  color: var(--accentSuperLight-color);
+}
+
 
 #transition {
   position: fixed;
