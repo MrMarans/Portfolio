@@ -1,14 +1,13 @@
-const ImageLinks = ["Images/metaverse-icon-modified.png","Images/microchip-icon-modified.png", "Images/logo_weiß_rgb_transp.png", "Images/globe-network-icon-modified (1).png"];
+const PreLoadImages = ["Images/metaverse-icon-modified.png","Images/microchip-icon-modified.png", "Images/logo_weiß_rgb_transp.png", "Images/globe-network-icon-modified (1).png"];
 
 
 
-window.addEventListener('load', reverseElements);
-window.addEventListener('load', updateProjectsBG);
+window.addEventListener('DOMContentLoaded', reverseElements);
+window.addEventListener('DOMContentLoaded', updateProjectsBG);
 // Animation für den Willkommen-Text
 window.addEventListener('load', () => {
   const animatedText = document.querySelector('.animated-text');
   animatedText.style.opacity = '1';
-  preloadImage("Images/metaverse-icon-modified.png");
   numbers.forEach(function(ImageLinks) {
     var img=new Image();
     img.src=ImageLinks;
