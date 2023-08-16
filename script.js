@@ -5,6 +5,10 @@ window.addEventListener('load', updateProjectsBG);
 window.addEventListener('load', () => {
   const animatedText = document.querySelector('.animated-text');
   animatedText.style.opacity = '1';
+  preloadImage("Images/metaverse-icon-modified.png");
+  preloadImage("Images/microchip-icon-modified.png");
+  preloadImage("Images/logo_weiß_rgb_transp.png");
+  preloadImage("Images/globe-network-icon-modified (1).png");
 });
 
 // Scroll-Animation für Menü-Links
@@ -74,6 +78,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 }*/
 
+
+//preload Images
+function preloadImage(url)
+{
+    var img=new Image();
+    img.src=url;
+}
 
 
 function updateProjectsBG() {
