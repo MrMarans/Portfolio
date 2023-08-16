@@ -8,10 +8,11 @@ window.addEventListener('DOMContentLoaded', updateProjectsBG);
 window.addEventListener('load', () => {
   const animatedText = document.querySelector('.animated-text');
   animatedText.style.opacity = '1';
-  numbers.forEach(function(ImageLinks) {
+  PreLoadImages.forEach(function(PreLoadImages) {
     var img=new Image();
-    img.src=ImageLinks;
+    img.src=PreLoadImages;
   });
+  console.log("LoadedImages");
 });
 
 // Scroll-Animation für Menü-Links

@@ -618,3 +618,7 @@ iframe{
   border: 0px;
 }
 
+blockquote {
+  width: 60%; /* Hier kannst du die Breite des Blockquotes anpassen */
+  margin: 0 auto; /* Zentriert das Element horizontal */
+}
