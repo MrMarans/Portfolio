@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+
+<div class="project">
+<h3 class="ProjectTitle">LoL Match Prediction</h3>
+<p class="ProjektDescriptionText"> Diese Anwendung ist noch im Aufbau. Mit diesem Projekt verbinde ich das Lernen von Django mit der verbesserung des eigenen Skills in Machine Learning. Es handelt sich um eine Webseite, welches
+    Daten eines aktuell laufenden Matches abgreift und diese an mein Backend sendet. Dort wird werden die Daten verarbeitet und mithilfe eines Tensorflow/Stacking Classifier Models das Ergebnis des Matches vorhersagt.  </p>
+<p class="ProjektDescriptionText">
+Aktuell ist das Backend komplett fertig. An dem Stacking Classifier wird aktuell noch gearbeitet und optimiert, ggf. wird bald auf ein Dense Model umgestiegen bzw geschaut, womit ich bessere Ergebnisse bekomme.
+Wenn dies fertig ist, wird ein Javascript Framework verwendet (vermutlich Vue.js), um eine Webseite dafür zu entwickeln.
+</p>
+
+<h4 class="ProjectSubTitle">Schnellüberblick</h4>
+<ul>
+  <li>Django</li>
+  <li>RESTful API</li>
+  <li>Poetry</li>
+  <li>Tensorflow</li>
+  <li>Scikit-Learn</li>
+  <li>Celery und Redis</li>
+  <li>Docker</li>
+  <li>Vue.js?</li>
+  <li>Einzelprojekt</li>
+</ul>
+
+<h4 class="ProjectSubTitle">
+    Einblicke ins Backend
+</h4>
+<p class="ProjektDescriptionText"> Für das Backend wird Django und SQLite für die Datenbank genutzt.
+    Mithilfe der RiotAPI werden folgende Daten abgegriffen: </p>
+    <ul>
+        <li>Live Match Daten, also Daten eines laufenden Spiels</li>
+        <li>Match Snapshots, also Daten verschiedener Zeitpunkte eines vergangenen Matches</li>
+        <li>Das Endergebnis eines vergangenen Matches</li>
+    </ul>
+    <p class="ProjektDescriptionText">
+    Für jedes gibt es eigene Datenbank Models und eigene Serializer. Das Ziel ist, zunächst
+    nur mithilfe der Match Snapshots zu trainieren, welche den Ausgang des Matches beinhaltet. 
+    In Zukunft ist jedoch geplant, wenn mehr Nutzer vorhanden sind, dass Live Match Daten gespeichert werden und diese mit den Endergebnissen des Matches verbunden werden.
+    Dadurch werden Daten immer neu erzeugt und benötigen dadurch nicht mehr das gezielte Sammeln von Match Snapshots diverser Liegen und Modis.
+</p>
+
+<h4 class="ProjectSubTitle">Über die ML Models</h4>
+<p class="ProjektDescriptionText">
+
+    Aktuell wird ein Stacking Model genutzt, bestehend aus einem DecisionTree, Random Forest, KNeighbors und xgBoost.
+    Der final estimator ist ein LogisticRegressor. 
+    Es ist auch ein Dense Tensorflow Model fertig, dieses wurde aber bisher nicht getestet.
+    Die Models lernen hierbei auf folgenden Daten, die mir in Live Matches und den Snapshots zugänglich sind:
+</p>
+<ul>  <li>gameTime</li> 
+    <ul>Pro Team:
+    <li>Champion Kills</li>
+    <li>Horde Kills</li>
+    <li>Dragon Kills</li>
+    <li>RiftHerald Kills</li>
+    <li>Baron Kills</li>
+    <li>Tower Kills</li>
+    <li>Inhib Kills</li>
+    <li>Alle oberen Elemente nochmal mit _first - bedeutend, dass das Team der erste war mit dem jeweiligen Kill</li>
+    <ul>Pro Spieler:
+        <li>Champion</li>
+        <li>Level</li>
+        <li>Kills</li>
+        <li>Assists</li>
+        <li>Deaths</li>
+    </ul>
+</ul>
+</ul>
+
+<p class="ProjektDescriptionText">Hierbei werden die Elemente pro Spieler one-Hot encoded, wodurch 1709 Features entstehen, mit dem das Model trainiert wird. 
+    Weitere Features sind ggf. in Arbeit.
+</p>
+
+<h4 class="ProjectSubTitle">Einblicke ins Frontend</h4>
+<p class="ProjektDescriptionText">
+  Noch nicht fertig
+</p>
+
+<div class="container">
+    <img src="../Images/Django_AdminPNG.PNG" style="width: 33vw;">
+    <img src="../Images/RestfulPNG.PNG" style="width: 33vw;">
+    <img src="../Images/Stacking.png" style="width: 33vw;">
+    <!-- Weitere Bilder hier einfügen -->
+  </div>
+
+</div>
+
+
+
+
+</html>
