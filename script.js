@@ -220,6 +220,7 @@ function changeLoadingIcon(activate) {
 
     //other
     case "BH-WebApp":
+    case "LeaguePredict":
       image.src = "Images/globe-network-icon-modified (1).png";
       break;
   }
