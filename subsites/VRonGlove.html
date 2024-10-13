@@ -3,12 +3,29 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
   <link rel="stylesheet" type="text/css" href="../styles.css">
+  <script src="../script.js" defer></script>
 </head>
 
 <div class="project">
     <h3 class="ProjectTitle">VRonGlove</h3>
+
+    <div class="audio-player">
+      <button class="play-pause-btn" aria-label="Play/Pause">
+        <span class="play-icon">▶</span>
+        <span class="pause-icon" style="display:none;">❚❚</span>
+      </button>
+      <div class="timeline">
+        <div class="progress"></div>
+      </div>
+      <div class="time-display">-0:00</div>
+      <audio id="podcast-audio" preload="none">
+        <source src="../audioFiles/VRonGlove.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+
     <p class="ProjektDescriptionText">
       Der VRonGlove ist ein Open-Source Motion Tracking Handschuh mit Force Feedback. Dies ist das Ergebnis meiner Master-Abschlussarbeit im Studienfach Medieninformatik. Ein Fokus des Handschuhs, die niedrigen Materialkosten, belaufen sich pro paar auf etwa 125€. Das Projekt wurde in der OpenGloves Community aufgenommen und weiterentwickelt.
     </p>

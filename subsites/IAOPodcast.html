@@ -3,13 +3,29 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
   <link rel="stylesheet" type="text/css" href="../styles.css">
+  <script src="../script.js" defer></script>
 </head>
 
 
 <div class="project">
     <h3 class="ProjectTitle">Podcast</h3>
+    
+    <div class="audio-player">
+      <button class="play-pause-btn" aria-label="Play/Pause">
+        <span class="play-icon">▶</span>
+        <span class="pause-icon" style="display:none;">❚❚</span>
+      </button>
+      <div class="timeline">
+        <div class="progress"></div>
+      </div>
+      <div class="time-display">-0:00</div>
+      <audio id="podcast-audio" preload="none">
+        <source src="../audioFiles/Smart Service Podcast.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    
     <p class="ProjektDescriptionText">Das Kompetenzzentrum Smart Services hat einen jährlichen Podcast. Die Folgen für das Jahr 2023 habe ich geplant,
       gedreht und geschnitten. Der Fokus dieser Staffel war, dass in verschiedene Unternehmen geblickt werden und deren Smarter Service 
       dargestellt werden soll. Für die Produktion wurde mir eine Nikon 5D Mark 4, ein Stativ und Rode Ansteckmikros von der Hochschule Furtwangen bereits gestellt.

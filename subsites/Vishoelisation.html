@@ -3,13 +3,27 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
   <link rel="stylesheet" type="text/css" href="../styles.css">
+  <script src="../script.js" defer></script>
 </head>
 
-
+<body>
 <div class="project">
   <h3 class="ProjectTitle">Vishoelisation</h3>
+  <div class="audio-player">
+    <button class="play-pause-btn" aria-label="Play/Pause">
+      <span class="play-icon">▶</span>
+      <span class="pause-icon" style="display:none;">❚❚</span>
+    </button>
+    <div class="timeline">
+      <div class="progress"></div>
+    </div>
+    <div class="time-display">-0:00</div>
+    <audio id="podcast-audio" preload="none">
+      <source src="../audioFiles/Vishoelisation.wav" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
   <p class="ProjektDescriptionText">Hier werden diverse Schuhe erkannt und Variationen dieser dargestellt. Dieser Demonstrator in Zusammenarbeit mit Schuh-Kaufmann Heilbronn und dem Urban Innovation Hub Heilbronn entstanden. Im Urban Innovation Hub wird es zudem dauerhaft ausgestellt.</p>
   <p class="ProjektDescriptionText">Diese Anwendung für Android ist speziell für den Einzelhandel und dem Problem, dass das Schuhangebot zu groß ist für die meisten Läden von Einzelhändlern. Der Schuh bekam <a href="https://web.archive.org/web/20230608031923/https://www.swr.de/swraktuell/baden-wuerttemberg/heilbronn/urban-innovation-hub-heilbronn-innenstadt-leerstand-einzelhandel-hochschule-online-shopping-100.html" target="_blank">große mediale Aufmerksamkeit</a>. und kann <a href="https://urbaninnovationhub.de/ausstellung/vishoelisation/" target="_blank">hier</a> noch gefunden werden.
   </p>
@@ -52,5 +66,5 @@
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="YTVideo"></iframe>
 
 </div>
-
+</body>
 </html>
