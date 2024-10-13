@@ -47,15 +47,28 @@
     
     
     <div id="projects" class="section topline" style="padding-top: 10em; padding-bottom: 5em;">
+      
+      
       <div id="PodcastMode">
-        <h2>Webseite nun auch mit Podcasts!</h2>
-        <p id="PodcastText">Diese Webseite bietet nun Podcasts für die ganze Webseite sowie einzelne Projekte an. 
+        <h2>Webseite nun auch mit <span class="purple-text">Podcasts</span>!</h2>
+        <p id="PodcastText">Diese Webseite bietet nun KI generierte englische Podcasts für die ganze Webseite sowie einzelne Projekte an. 
           Einfach auf den Playbutton klicken.
-          </p>
-
-
-
-
+        </p>
+        <p class="audio-file-name">Die ganze Webseite</p>
+        <div class="audio-player">
+          <button class="play-pause-btn" aria-label="Play/Pause">
+            <span class="play-icon">▶</span>
+            <span class="pause-icon" style="display:none;">❚❚</span>
+          </button>
+          <div class="timeline">
+            <div class="progress"></div>
+          </div>
+          <div class="time-display">-0:00</div>
+          <audio id="podcast-audio" preload="none">
+            <source src="audioFiles/Vishoelisation.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
       </div>
 
       <h2 style="margin-bottom: 1em;">Meine Projekte</h2>

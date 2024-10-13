@@ -48,15 +48,31 @@ a{
 }
 
 
-#PodcastMode{
-  padding-bottom: 10em;
+#PodcastMode {
+  padding: 2em;
+  background-color: var(--shadow-color);
+  border-radius: 10px;
+  margin: 2em auto;
+  max-width: 700px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-#PodcastText{
-  padding-left: 3em;
-  padding-right: 3em;  
+
+#PodcastText {
+  padding: 1em 3em;
+  margin-bottom: 1em;
 }
 
+.audio-file-name {
+  color: var(--accentSuperLight-color);
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.purple-text {
+  color: var(--accentSuperLight-color);
+}
 
 #transition {
   position: fixed;
@@ -68,7 +84,6 @@ a{
   overflow: hidden;
   filter: blur(0, 60px);
 }
-
 
 #aboutMe {
   background-color: var(--accentShadow-color);
@@ -631,4 +646,59 @@ iframe{
 blockquote {
   width: 60%; /* Hier kannst du die Breite des Blockquotes anpassen */
   margin: 0 auto; /* Zentriert das Element horizontal */
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  background-color: var(--accentDark-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 0vw;
+  margin-right: 0vw;
+  border-radius: 50vw;
+}
+
+.play-pause-btn {
+  background-color: var(--accentSuperLight-color);
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.play-pause-btn:hover {
+  background-color: var(--accentlight-color);
+}
+
+.timeline {
+  flex-grow: 1;
+  background-color: var(--accentShadow-color);
+  height: 5px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.progress {
+  background-color: var(--accentSuperLight-color);
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  transition: width 0.1s linear;
+}
+
+.time-display {
+  padding-left: 10px;
+  color: var(--accentSuperLight-color);
+  font-size: 14px;
 }

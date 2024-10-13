@@ -338,3 +338,65 @@ function loadJSONFile(name) {
     });
 }
 //loadJSONFile("Projekt 1");
+
+// Audio player functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const audioPlayer = document.querySelector('.audio-player');
+  const audio = document.querySelector('#podcast-audio');
+  const playPauseBtn = audioPlayer.querySelector('.play-pause-btn');
+  const progress = audioPlayer.querySelector('.progress');
+  const timeline = audioPlayer.querySelector('.timeline');
+  const timeDisplay = audioPlayer.querySelector('.time-display');
+
+  playPauseBtn.addEventListener('click', togglePlayPause);
+  audio.addEventListener('timeupdate', updateProgress);
+  audio.addEventListener('ended', resetPlayButton);
+  timeline.addEventListener('click', seek);
+
+  function togglePlayPause() {
+    if (audio.paused) {
+      audio.play();
+      updatePlayPauseButton(false);
+    } else {
+      audio.pause();
+      updatePlayPauseButton(true);
+    }
+  }
+
+  function updatePlayPauseButton(isPaused) {
+    playPauseBtn.querySelector('.play-icon').style.display = isPaused ? 'inline' : 'none';
+    playPauseBtn.querySelector('.pause-icon').style.display = isPaused ? 'none' : 'inline';
+  }
+
+  function resetPlayButton() {
+    updatePlayPauseButton(true);
+    progress.style.width = '0%';
+    updateTimeDisplay();
+  }
+
+  function updateProgress() {
+    const percent = (audio.currentTime / audio.duration) * 100;
+    progress.style.width = `${percent}%`;
+    updateTimeDisplay();
+  }
+
+  function seek(e) {
+    const percent = e.offsetX / timeline.offsetWidth;
+    audio.currentTime = percent * audio.duration;
+    updateTimeDisplay();
+  }
+
+  function updateTimeDisplay() {
+    const remainingTime = audio.duration - audio.currentTime;
+    timeDisplay.textContent = `-${formatTime(remainingTime)}`;
+  }
+
+  function formatTime(timeInSeconds) {
+    const minutes = Math.floor(timeInSeconds / 60);
+    const seconds = Math.floor(timeInSeconds % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  }
+
+  // Initial time display update
+  audio.addEventListener('loadedmetadata', updateTimeDisplay);
+});
