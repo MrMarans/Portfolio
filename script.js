@@ -1,4 +1,4 @@
-const PreLoadImages = ["Images/metaverse-icon-modified.png","Images/microchip-icon-modified.png", "Images/logo_weiß_rgb_transp.png", "Images/globe-network-icon-modified (1).png"];
+const PreLoadImages = ["/Images/metaverse-icon-modified.png","/Images/microchip-icon-modified.png", "/Images/logo_weiß_rgb_transp.png", "/Images/globe-network-icon-modified (1).png"];
 
 
 
@@ -7,7 +7,9 @@ window.addEventListener('DOMContentLoaded', updateProjectsBG);
 // Animation für den Willkommen-Text
 window.addEventListener('load', () => {
   const animatedText = document.querySelector('.animated-text');
-  animatedText.style.opacity = '1';
+  if (animatedText) {
+    animatedText.style.opacity = '1';
+  }
   PreLoadImages.forEach(function(PreLoadImages) {
     var img=new Image();
     img.src=PreLoadImages;
@@ -30,14 +32,18 @@ document.querySelectorAll('.menu ul li a').forEach(link => {
 });
 
 // Einblenden des Menüs beim Scrollen
-window.addEventListener('scroll', () => {
-  const menu = document.querySelector('.menu');
-  const scrollPosition = window.pageYOffset;
-  if (scrollPosition > 50) {
-    menu.classList.add('visible');
-  } else {
-    menu.classList.remove('visible');
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('scroll', () => {
+    const menu = document.querySelector('.menu');
+    if (menu) {
+      const scrollPosition = window.pageYOffset;
+      if (scrollPosition > 50) {
+        menu.classList.add('visible');
+      } else {
+        menu.classList.remove('visible');
+      }
+    }
+  });
 });
 
 
@@ -49,9 +55,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const scrollDownArrows = document.querySelector('.scroll-down-arrows');
   const projectsSection = document.getElementById('projects');
 
-  scrollDownArrows.addEventListener('click', function () {
-    projectsSection.scrollIntoView({ behavior: 'smooth' });
-  });
+  if (scrollDownArrows && projectsSection) {
+    scrollDownArrows.addEventListener('click', function () {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
 
   //Timeline zeug
 
@@ -186,13 +194,24 @@ async function toggleProjectDetails(deactivate, activate, iframe) {
   await new Promise(resolve => setTimeout(resolve, 250));
   document.getElementById(deactivate).style.display = "none";
   document.getElementById(activate).style.display = "block";
-  document.getElementById("iframe").src = "subsites/" + iframe + ".html";
+  
+  // Überprüfen, ob iframe definiert ist, bevor wir es verwenden
+  if (iframe) {
+    document.getElementById("iframe").src = "subsites/" + iframe + ".html";
+  } else {
+    // Wenn iframe nicht definiert ist (z.B. beim Zurückkehren zur Hauptseite),
+    // setzen wir die src auf eine leere Seite oder entfernen sie ganz
+    document.getElementById("iframe").src = "about:blank";
+  }
+  
   if (deactivate != "MainSite") {
     document.getElementById('projects').scrollIntoView();
   }
   else {
     window.scrollTo(0, 0);
-    changeLoadingIcon(iframe);
+    if (iframe) {
+      changeLoadingIcon(iframe);
+    }
   }
   const img = document.getElementById("Logo");
   img.style.filter = "blur(0px)";
