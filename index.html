@@ -8,14 +8,12 @@
 </head>
   
 
- 
+
 
 <body>
   <div id="transition">
     <img src="Images/logo_weiß_rgb_transp.png" id="Logo">
   </div>
-
-
 
   <div id="MainSite" style="display: block;">
     <div class="fullscreen-video">
@@ -32,6 +30,7 @@
       </div>
     </div>
 
+    
     <nav class="menu">
       <ul>
         <li><a href="#aboutMe">About Me</a></li>
@@ -39,34 +38,26 @@
         <li><a href="#impressum">Impressum</a></li>
       </ul>
     </nav>
-
-    <!--
-    <div id="aboutMe topline" class="section">
-
-      <div id="timeline">
-        <div class="line">
-          <div class="circle">
-            <h2 style="display: none;" class="StepsLebenslauf">Bachelor<br>Medienkonzeption</h2>
-            <p class="StepsLebenslaufText" style="display: none;">Medienkonzeption <br> 3D
-              Modeling<br>Animation<br>VFX<br>Interaktionsdesign</p>
-          </div>
-          <div class="circle" id="circle2"></div>
-          <div class="circle" id="circle3"></div>
-          <div class="circle" id="circle4"></div>
-        </div>
-      </div>
-    </div>
     
-  Edit so it changes
-  -->
-
     
-
-
-
     
-
+    
+    
+    
+    
+    
     <div id="projects" class="section topline" style="padding-top: 10em; padding-bottom: 5em;">
+      <div id="PodcastMode">
+        <h2>Webseite nun auch mit Podcasts!</h2>
+        <p id="PodcastText">Diese Webseite bietet nun Podcasts für die ganze Webseite sowie einzelne Projekte an. 
+          Einfach auf den Playbutton klicken.
+          </p>
+
+
+
+
+      </div>
+
       <h2 style="margin-bottom: 1em;">Meine Projekte</h2>
       <div class="filter-buttons">
         <button class="filter-button" data-category="Alle">Alle</button>
@@ -75,12 +66,11 @@
         <button class="filter-button" data-category="video">Video</button>
         <button class="filter-button" data-category="sonstige">Sonstige</button>
       </div>
-
-
-
-
+      
+      
+      
+      
       <div class="projects">
-        
         <div class="SingleProject sonstige" onclick="toggleProjectDetails('MainSite', 'projects-container' ,'LeaguePredict')">
           <div class="imgBox"><img src="Images/League_Bild.jpeg" class="imges"></div>
           <div class="TextBox">
@@ -162,7 +152,7 @@
           </div>
         </div>
       </div>
-     
+
 
     </div>
     <div id="impressum" class="section topline">
@@ -178,7 +168,7 @@
 
   <div id="projects-container" style="height: 100%; display: none;">
     <div id="backButton" onclick="toggleProjectDetails('projects-container', 'MainSite')">
-      < </div>
+      </div>
         <!--
         3D Print
         Coffeebox

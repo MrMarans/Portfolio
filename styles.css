@@ -48,6 +48,16 @@ a{
 }
 
 
+#PodcastMode{
+  padding-bottom: 10em;
+}
+
+#PodcastText{
+  padding-left: 3em;
+  padding-right: 3em;  
+}
+
+
 #transition {
   position: fixed;
   height: 100%;
